@@ -6,7 +6,7 @@ layout: base
 
 <article class="article-wrap">
   <div class="article-meta">
-    <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+    {% if date %}<time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% endif %}
     {% for tag in displayTagList %}
     <a class="article-meta__tag" href="/tag/{{ tag }}/">{{ tag }}</a>
     {% endfor %}

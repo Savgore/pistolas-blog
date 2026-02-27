@@ -17,14 +17,18 @@ module.exports = function (eleventyConfig) {
 
   // --- Filters ---
 
-  // Format date as "27 Feb 2026"
+  // Format date as "27 Feb 2026" — returns "undated" if date is missing or invalid
   eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("d LLL yyyy");
+    if (!dateObj) return "undated";
+    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    return dt.isValid ? dt.toFormat("d LLL yyyy") : "undated";
   });
 
-  // ISO date for <time> datetime attribute
+  // ISO date for <time> datetime attribute — returns empty string if date is missing or invalid
   eleventyConfig.addFilter("isoDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO();
+    if (!dateObj) return "";
+    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    return dt.isValid ? dt.toISO() : "";
   });
 
   // Estimate reading time from content string
