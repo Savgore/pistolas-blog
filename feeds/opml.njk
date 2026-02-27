@@ -1,0 +1,22 @@
+---
+permalink: /feeds/opml.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>{{ site.title }} — all feeds</title>
+    <dateCreated>{{ page.date | dateToRfc3339 }}</dateCreated>
+    <ownerName>{{ site.author.name }}</ownerName>
+  </head>
+  <body>
+    <outline text="All posts — {{ site.title }}" type="rss"
+      xmlUrl="{{ site.url }}/feed.xml"
+      htmlUrl="{{ site.url }}/"/>
+    {% for tag in collections.tagList %}
+    <outline text="{{ tag }} — {{ site.title }}" type="rss"
+      xmlUrl="{{ site.url }}/feeds/tags/{{ tag }}/feed.xml"
+      htmlUrl="{{ site.url }}/tag/{{ tag }}/"/>
+    {% endfor %}
+  </body>
+</opml>

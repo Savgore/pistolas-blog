@@ -1,20 +1,47 @@
 ---
 layout: base
-title: "Topics"
-description: "Browse all topics. Every tag has its own page and RSS feed."
+title: "Topics & Feeds"
+description: "Browse all topics. Every tag has its own archive page and RSS feed. Subscribe to as many as you like."
 permalink: /tags/
 ---
 
 <div class="site-hero">
-  <h1>Topics</h1>
-  <p>Every tag has its own archive page and RSS feed. Subscribe to as many as you like — adding a new tag to a post creates both automatically.</p>
+  <h1>Topics &amp; <em>feeds</em></h1>
+  <p>Every topic has its own page and RSS feed. Subscribe to individual topics in your RSS reader, or import all of them at once.</p>
 </div>
 
-<div class="tags-grid">
+<div class="rss-explainer">
+  <div class="rss-explainer__inner">
+    <span class="rss-explainer__label">How to subscribe</span>
+    <p>Click any <strong>Subscribe</strong> link to open the feed directly, then paste the URL into your RSS reader (Reeder, NetNewsWire, Feedly, etc.). Or download the <a href="/feeds/opml.xml" class="rss-explainer__opml">OPML bundle</a> to import all feeds at once.</p>
+    <div class="rss-explainer__feeds">
+      <a href="/feed.xml" class="rss-feed-link">
+        <span class="rss-feed-link__label">All posts</span>
+        <span class="rss-feed-link__url">/feed.xml</span>
+        <span class="rss-feed-link__cta">Subscribe →</span>
+      </a>
+      <a href="/feeds/opml.xml" class="rss-feed-link rss-feed-link--opml">
+        <span class="rss-feed-link__label">All feeds (OPML bundle)</span>
+        <span class="rss-feed-link__url">/feeds/opml.xml</span>
+        <span class="rss-feed-link__cta">Import →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="tags-subscribe">
   {% for tag in collections.tagList %}
-  <a class="tags-grid__item" href="/tag/{{ tag }}/">
-    <span class="tags-grid__item__name">{{ tag }}</span>
-    <span class="tags-grid__item__count">{{ collections.posts | byTag(tag) | length }} posts</span>
-  </a>
+  {% set count = collections.posts | byTag(tag) | length %}
+  <div class="tags-subscribe__item">
+    <div class="tags-subscribe__info">
+      <a class="tags-subscribe__name" href="/tag/{{ tag }}/">{{ tag }}</a>
+      <span class="tags-subscribe__count">{{ count }} post{% if count != 1 %}s{% endif %}</span>
+    </div>
+    <a class="rss-feed-link rss-feed-link--compact" href="/feeds/tags/{{ tag }}/feed.xml">
+      <span class="rss-feed-link__label">{{ tag }}</span>
+      <span class="rss-feed-link__url">/feeds/tags/{{ tag }}/feed.xml</span>
+      <span class="rss-feed-link__cta">Subscribe →</span>
+    </a>
+  </div>
   {% endfor %}
 </div>
