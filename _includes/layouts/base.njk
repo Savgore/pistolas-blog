@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "partials/head-meta.njk" %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="site-wrap">
+{% include "partials/nav.njk" %}
+<main id="main">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+</div>
+</body>
+</html>

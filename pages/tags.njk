@@ -1,0 +1,20 @@
+---
+layout: base
+title: "Topics"
+description: "Browse all topics. Every tag has its own page and RSS feed."
+permalink: /tags/
+---
+
+<div class="site-hero">
+  <h1>Topics</h1>
+  <p>Every tag has its own archive page and RSS feed. Subscribe to as many as you like — adding a new tag to a post creates both automatically.</p>
+</div>
+
+<div class="tags-grid">
+  {% for tag in collections.tagList %}
+  <a class="tags-grid__item" href="/tag/{{ tag }}/">
+    <span class="tags-grid__item__name">{{ tag }}</span>
+    <span class="tags-grid__item__count">{{ collections.posts | byTag(tag) | length }} posts</span>
+  </a>
+  {% endfor %}
+</div>

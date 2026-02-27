@@ -1,0 +1,43 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% if title and title != site.title %}
+  <title>{{ title }} — {{ site.title }}</title>
+{% else %}
+  <title>{{ site.title }}</title>
+{% endif %}
+
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+{# Open Graph #}
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:type" content="{% if layout == 'post' or layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if og_image %}
+<meta property="og:image" content="{{ site.url }}{{ og_image }}">
+{% else %}
+<meta property="og:image" content="{{ site.url }}/assets/og-default.png">
+{% endif %}
+
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ site.author.twitter }}">
+<meta name="twitter:title" content="{{ title or site.title }}">
+<meta name="twitter:description" content="{{ description or site.description }}">
+{% if og_image %}
+<meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
+{% else %}
+<meta name="twitter:image" content="{{ site.url }}/assets/og-default.png">
+{% endif %}
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+{# RSS feeds #}
+<link rel="alternate" type="application/rss+xml" title="All posts — {{ site.title }}" href="/feed.xml">
+{% if tags %}{% for tag in tags | displayTags %}
+<link rel="alternate" type="application/rss+xml" title="{{ tag }} — {{ site.title }}" href="/feeds/tags/{{ tag }}/feed.xml">
+{% endfor %}{% endif %}

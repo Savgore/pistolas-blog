@@ -1,0 +1,24 @@
+---
+layout: base
+title: "Writing"
+description: "All posts — AI, alignment, systems thinking, cybersecurity, futurism, privacy, and more."
+permalink: /blog/
+---
+
+<div class="site-hero">
+  <h1>Writing</h1>
+  <p>All posts, newest first.</p>
+</div>
+
+{% include "partials/tag-bar.njk" %}
+
+<div class="post-list">
+  {% for post in collections.posts %}
+    {% set title = post.data.title %}
+    {% set date = post.date %}
+    {% set url = post.url %}
+    {% set description = post.data.description %}
+    {% set tags = post.data.tags %}
+    {% include "partials/post-item.njk" %}
+  {% endfor %}
+</div>

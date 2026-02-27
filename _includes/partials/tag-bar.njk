@@ -1,0 +1,6 @@
+<div class="tag-bar" role="navigation" aria-label="Filter by topic">
+  <a class="tag-pill" href="/blog/"{% if not activeTag %} aria-current="true"{% endif %}>All</a>
+  {% for tag in collections.tagList %}
+  <a class="tag-pill" href="/tag/{{ tag }}/"{% if activeTag == tag %} aria-current="true"{% endif %}>{{ tag }}</a>
+  {% endfor %}
+</div>

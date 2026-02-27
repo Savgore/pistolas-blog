@@ -1,0 +1,21 @@
+---
+layout: base
+---
+<div class="site-hero">
+  <h1>{{ tag }}</h1>
+  <p>{{ collections.posts | byTag(tag) | length }} posts tagged <em>{{ tag }}</em></p>
+</div>
+
+{% set activeTag = tag %}
+{% include "partials/tag-bar.njk" %}
+
+<div class="post-list">
+  {% for post in collections.posts | byTag(tag) %}
+    {% set title = post.data.title %}
+    {% set date = post.date %}
+    {% set url = post.url %}
+    {% set description = post.data.description %}
+    {% set tags = post.data.tags %}
+    {% include "partials/post-item.njk" %}
+  {% endfor %}
+</div>

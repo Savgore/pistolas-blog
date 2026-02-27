@@ -1,0 +1,22 @@
+{% set displayTagList = tags | displayTags %}
+<div class="post-item">
+  <div class="post-item__date">
+    <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+  </div>
+  <div>
+    {% if displayTagList.length > 0 %}
+    <a class="post-item__tag" href="/tag/{{ displayTagList[0] }}/">{{ displayTagList[0] }}</a>
+    {% endif %}
+    <a class="post-item__title" href="{{ url }}">{{ title }}</a>
+    {% if description %}
+    <p class="post-item__desc">{{ description }}</p>
+    {% endif %}
+    {% if displayTagList.length > 1 %}
+    <div class="post-item__tags">
+      {% for tag in displayTagList | slice(1) %}
+      <a class="tag-pill" href="/tag/{{ tag }}/">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
