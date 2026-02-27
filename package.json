@@ -6,9 +6,9 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "npx eleventy",
-    "start": "npx eleventy --serve",
-    "debug": "DEBUG=Eleventy* npx eleventy"
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "Savva Pistolas",
