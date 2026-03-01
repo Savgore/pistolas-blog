@@ -5,26 +5,22 @@ description: "Writing about AI, alignment, systems thinking, cybersecurity, futu
 permalink: /
 ---
 
-<div class="site-hero">
-  <!-- AUTHOR: Replace with your own words -->
-  <h1>Writing to think<br><em>things through.</em></h1>
-  <p>I'm Savva — I find myself drawn to how systems work: technical ones, social ones, cognitive ones, and the uncomfortable zone where they interact. This is where I write it down.</p>
-  <p style="margin-top: var(--space-4);">Subjects include AI, alignment, management cybernetics, cybersecurity, privacy, futurism, and whatever else refuses to leave me alone.</p>
-
-  <!-- DECORATIVE: Homepage visual mark — palette colours only: #F3F5F2, #E6EAE5, #C2CAC2, #4A564A, #2B5C38, #161C15 -->
-  <svg class="hero-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-    <rect x="0" y="0" width="80" height="80" fill="none" stroke="#C2CAC2" stroke-width="1"/>
-    <rect x="8" y="8" width="64" height="64" fill="none" stroke="#C2CAC2" stroke-width="1"/>
-    <rect x="20" y="20" width="40" height="40" fill="none" stroke="#2B5C38" stroke-width="1.5"/>
-    <rect x="32" y="32" width="16" height="16" fill="#2B5C38" opacity="0.4"/>
-    <line x1="0" y1="0" x2="4" y2="0" stroke="#2B5C38" stroke-width="3"/>
-    <line x1="0" y1="0" x2="0" y2="4" stroke="#2B5C38" stroke-width="3"/>
-  </svg>
+<div class="site-hero site-hero--with-photo">
+  <div class="site-hero__text">
+    <!-- AUTHOR: Replace with your own words -->
+    <h1>Writing to think<br><em>things through.</em></h1>
+    <p>I'm Savva — I find myself drawn to how systems work: technical ones, social ones, cognitive ones, and the uncomfortable zone where they interact. This is where I write it down.</p>
+    <p style="margin-top: var(--space-4);">Subjects include AI, alignment, management cybernetics, cybersecurity, privacy, futurism, and whatever else refuses to leave me alone.</p>
+  </div>
+  <div class="site-hero__photo">
+    <!-- AUTHOR: Replace this div with an <img> tag pointing to your photo -->
+    <!-- e.g. <img src="/assets/savva.jpg" alt="Savva Pistolas"> -->
+  </div>
 </div>
 
 {% include "partials/tag-bar.njk" %}
 
-<div class="post-list">
+<div class="post-list post-list--grid">
   {% for post in collections.posts | limit(10) %}
     {% set title = post.data.title %}
     {% set date = post.date %}
