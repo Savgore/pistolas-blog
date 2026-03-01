@@ -1,12 +1,12 @@
 ---
-title: "Anxiety alleviation rituals - \"What do you want to know?\""
-date: 2024-05-04
+title: "smartphones and children"
+date: 2024-09-25
 description: ""
 tags:
   - post
   - systems
-  - ai
-permalink: /how-to-know/
+  - privacy
+permalink: /smartphones-and-children/
 og_image: /assets/og-default.png
 ---
 
