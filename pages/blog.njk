@@ -12,7 +12,7 @@ permalink: /blog/
 
 {% include "partials/tag-bar.njk" %}
 
-<div class="post-list post-list--grid">
+<div class="post-list">
   {% for post in collections.posts %}
     {% set title = post.data.title %}
     {% set date = post.date %}
