@@ -5,7 +5,9 @@ description: "A little about Savva Pistolas."
 permalink: /about/
 ---
 
-<!-- AUTHOR: Replace with your own words -->
+<!-- AUTHOR: Replace this div with an img tag once you have your photo -->
+<!-- e.g. <img class="about-photo" src="/assets/savva.jpg" alt="Savva Pistolas"> -->
+<div class="about-photo about-photo--placeholder"></div>
 
 I'm Savva. I spend most of my time thinking about systems — how they're designed, what they actually do (as opposed to what they're supposed to do), and how the people inside them navigate that gap. I write here to think things through.
 
