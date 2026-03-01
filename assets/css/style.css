@@ -10,10 +10,10 @@
 :root {
 
   /* --- COLOUR PALETTE: Olive --- */
-  --color-bg: #F5F4EC;
-  /* Warm parchment — primary background */
-  --color-bg-alt: #ECEADF;
-  /* Slightly deeper parchment — article bg, code blocks */
+  --color-bg: #F9F7ED;
+  /* Warm cream — primary background */
+  --color-bg-alt: #EEEBD9;
+  /* Warmer parchment — article bg, alt sections */
   --color-ink: #1C1C14;
   /* Near-black with warm undertone — primary text */
   --color-ink-muted: #585644;
@@ -489,7 +489,7 @@ main {
 }
 
 .prose pre {
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   border: var(--border);
   border-left: 3px solid var(--color-accent);
   padding: var(--space-5) var(--space-6);
