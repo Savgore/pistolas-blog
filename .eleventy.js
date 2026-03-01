@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   // --- Ignore reference files ---
   eleventyConfig.ignores.add("pistolas-style-direction.html");
+  eleventyConfig.ignores.add("pistolas-style-direction-hunter.html");
   eleventyConfig.ignores.add("pistolas-build-prompt.md");
   eleventyConfig.ignores.add("HANDOFF.md");
   eleventyConfig.ignores.add("og-generator.html");

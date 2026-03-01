@@ -9,23 +9,23 @@
    ========================================================================== */
 :root {
 
-  /* --- COLOUR PALETTE: Olive --- */
-  --color-bg: #F9F7ED;
-  /* Warm cream — primary background */
-  --color-bg-alt: #EEEBD9;
-  /* Warmer parchment — article bg, alt sections */
-  --color-ink: #1C1C14;
-  /* Near-black with warm undertone — primary text */
-  --color-ink-muted: #585644;
-  /* Mid-brown — secondary text, metadata, captions */
-  --color-rule: #C8C8B0;
-  /* Warm grey-yellow — borders, dividers */
-  --color-tag-bg: #ECEADF;
+  /* --- COLOUR PALETTE: Hunter --- */
+  --color-bg: #F3F5F2;
+  /* Cool near-white with a faint green breath — primary background */
+  --color-bg-alt: #E6EAE5;
+  /* Cool sage-grey — article bg, alt sections */
+  --color-ink: #161C15;
+  /* Near-black with green undertone — primary text */
+  --color-ink-muted: #4A564A;
+  /* Mid sage-green — secondary text, metadata, captions */
+  --color-rule: #C2CAC2;
+  /* Cool grey-green — borders, dividers */
+  --color-tag-bg: #E6EAE5;
   /* Same as alt bg — tag and code backgrounds */
-  --color-accent: #5C6228;
-  /* Olive — links, tags, accents */
-  --color-accent-hover: #464A1E;
-  /* Deeper olive — hover state */
+  --color-accent: #2B5C38;
+  /* Deep bottle green — links, tags, accents */
+  --color-accent-hover: #1E4228;
+  /* Deeper bottle green — hover state */
 
   /* --- TYPOGRAPHY --- */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;

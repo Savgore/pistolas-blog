@@ -57,9 +57,9 @@ No `stream:` field. Tags are the only taxonomy.
 - Use descriptive `alt` text always
 
 **OG/social thumbnails:**
-- Default: `/assets/og-default.png` (1200×630px, olive palette)
+- Default: `/assets/og-default.png` (1200×630px, hunter palette)
 - Custom per-post: save to `/assets/posts/[slug]/og.png` and set `og_image: /assets/posts/[slug]/og.png` in frontmatter
-- OG spec: 1200×630px, `#ECEADF` background, 4px `#5C6228` top rule, Playfair Display title, Source Code Pro byline
+- OG spec: 1200×630px, `#2B5C38` background, stone `#C2CAC2` rule, Playfair Display title, Source Code Pro byline
 
 ---
 

@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pistolas.co.uk — Style Direction (Hunter)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   DESIGN TOKENS — pistolas.co.uk
+   These are the canonical CSS custom properties for the entire site.
+   Do not hardcode any colour, font, or spacing value outside this block.
+   ========================================================================== */
+:root {
+
+  /* --- COLOUR PALETTE: Hunter --- */
+  --color-bg:           #F3F5F2;   /* Cool near-white with green undertone — primary background */
+  --color-bg-alt:       #E6EAE5;   /* Slightly deeper sage-grey — article bg, code blocks */
+  --color-ink:          #161C15;   /* Near-black with green-dark undertone — primary text */
+  --color-ink-muted:    #4A564A;   /* Mid forest grey — secondary text, metadata, captions */
+  --color-rule:         #C2CAC2;   /* Cool grey-green — borders, dividers */
+  --color-tag-bg:       #E6EAE5;   /* Same as alt bg — tag and code backgrounds */
+  --color-accent:       #2B5C38;   /* Hunter green — links, tags, labels, accents */
+  --color-accent-hover: #1E4228;   /* Deeper hunter — hover state */
+
+  /* --- TYPOGRAPHY --- */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Lora', Georgia, 'Times New Roman', serif;
+  --font-mono:    'Source Code Pro', 'Courier New', Courier, monospace;
+
+  /* --- TYPE SCALE (Major Third — 1.25 ratio) --- */
+  --text-xs:   0.64rem;   /* 10.2px — labels, fine print */
+  --text-sm:   0.80rem;   /* 12.8px — captions, footnotes */
+  --text-base: 1.00rem;   /* 16px   — base (body copy is 1.05rem) */
+  --text-md:   1.05rem;   /* 16.8px — body copy */
+  --text-lg:   1.25rem;   /* 20px   — post titles in list */
+  --text-xl:   1.56rem;   /* 25px   — subheadings, section titles */
+  --text-2xl:  1.95rem;   /* 31.2px — article titles */
+  --text-3xl:  2.44rem;   /* 39px   — hero headings */
+
+  /* --- LINE HEIGHTS --- */
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.65;
+  --leading-relaxed:1.82;
+
+  /* --- LETTER SPACING --- */
+  --tracking-tight:  -0.025em;
+  --tracking-snug:   -0.015em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.10em;
+  --tracking-widest:  0.14em;
+
+  /* --- SPACING SCALE (base 4px) --- */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+
+  /* --- LAYOUT --- */
+  --max-content: 680px;    /* Max width for article body prose */
+  --max-site:    900px;    /* Max width for overall site container */
+
+  /* --- BORDERS --- */
+  --radius-none: 0;
+  --border-width: 1px;
+  --border: var(--border-width) solid var(--color-rule);
+}
+
+/* ==========================================================================
+   STYLE GUIDE CHROME (not part of the site CSS)
+   ========================================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1E1D14;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  min-height: 100vh;
+}
+
+.sg-page { max-width: 1100px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-16); }
+
+/* Guide header */
+.sg-masthead {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+.sg-masthead-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+.sg-masthead h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-bg);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-4);
+}
+.sg-masthead h1 em { font-style: italic; color: var(--color-accent); }
+.sg-masthead p {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: #8A876A;
+  max-width: 600px;
+  line-height: var(--leading-normal);
+}
+
+/* Section structure */
+.sg-section {
+  background: var(--color-bg);
+  margin-bottom: var(--space-8);
+  border: 1px solid rgba(92,98,40,0.15);
+}
+.sg-section-header {
+  background: var(--color-ink);
+  padding: var(--space-4) var(--space-8);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.sg-section-header h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-bg-alt);
+  font-weight: 500;
+}
+.sg-section-header .sg-section-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  letter-spacing: var(--tracking-wide);
+}
+.sg-section-body { padding: var(--space-8); }
+.sg-section-body + .sg-section-body { border-top: var(--border); padding-top: var(--space-6); }
+
+/* Subsection labels */
+.sg-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+/* Token display */
+.sg-token-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-3); }
+.sg-token {
+  background: var(--color-bg-alt);
+  border: var(--border);
+  padding: var(--space-4);
+}
+.sg-token-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  letter-spacing: var(--tracking-wide);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.sg-token-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.sg-token-desc {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  font-style: italic;
+  line-height: var(--leading-normal);
+}
+
+/* Colour swatches */
+.sg-palette { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0; border: var(--border); }
+.sg-swatch {
+  padding: var(--space-6) var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  border-right: var(--border);
+  border-bottom: var(--border);
+}
+.sg-swatch:last-child { border-right: none; }
+.sg-swatch-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.sg-swatch-hex {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  opacity: 0.7;
+}
+.sg-swatch-role {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-style: italic;
+  opacity: 0.75;
+  line-height: 1.4;
+  margin-top: var(--space-1);
+}
+
+/* Font specimens */
+.sg-font-specimen {
+  border: var(--border);
+  margin-bottom: var(--space-4);
+}
+.sg-font-specimen-meta {
+  border-bottom: var(--border);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-bg-alt);
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sg-font-specimen-meta span {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  letter-spacing: var(--tracking-wide);
+}
+.sg-font-specimen-meta .sg-font-name {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.sg-font-specimen-body { padding: var(--space-6) var(--space-5); }
+
+/* Type scale table */
+.sg-type-scale { width: 100%; border-collapse: collapse; }
+.sg-type-scale tr { border-bottom: var(--border); }
+.sg-type-scale tr:last-child { border-bottom: none; }
+.sg-type-scale td { padding: var(--space-4) var(--space-2); vertical-align: middle; }
+.sg-type-scale .tc-name { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-accent); width: 110px; letter-spacing: var(--tracking-wide); }
+.sg-type-scale .tc-value { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-ink-muted); width: 80px; }
+.sg-type-scale .tc-sample { font-family: var(--font-display); color: var(--color-ink); line-height: 1.2; }
+
+/* Dividers */
+.sg-rule { border: none; border-top: var(--border); margin: var(--space-6) 0; }
+
+/* Two column layout for guide */
+.sg-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.sg-three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4); }
+
+/* Notes / principles */
+.sg-principle {
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg-alt);
+  margin-bottom: var(--space-3);
+}
+.sg-principle strong {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.sg-principle p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink);
+}
+
+/* Live component previews */
+.sg-preview {
+  background: var(--color-bg);
+  border: var(--border);
+  padding: var(--space-8) var(--space-8);
+}
+.sg-preview-dark {
+  background: var(--color-ink);
+  border: var(--border);
+  padding: var(--space-8);
+}
+
+/* ==========================================================================
+   ACTUAL SITE STYLES (the real CSS used on pistolas.co.uk)
+   These classes below ARE the site styles — copy them into your 11ty CSS.
+   ========================================================================== */
+
+/* --- Navigation --- */
+.site-nav {
+  border-bottom: var(--border);
+  padding: var(--space-5) var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.site-nav__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: var(--tracking-snug);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.site-nav__links { display: flex; gap: var(--space-6); list-style: none; }
+.site-nav__links a {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-nav__links a:hover,
+.site-nav__links a[aria-current] { color: var(--color-accent); }
+
+/* --- Hero / intro --- */
+.site-hero {
+  padding: var(--space-16) var(--space-10) var(--space-10);
+  border-bottom: var(--border);
+  max-width: var(--max-content);
+}
+.site-hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-5);
+}
+.site-hero h1 em { font-style: italic; color: var(--color-accent); }
+.site-hero p {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-muted);
+}
+
+/* --- Stream filters / tag bar --- */
+.stream-bar {
+  padding: var(--space-5) var(--space-10);
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  border-bottom: var(--border);
+}
+.stream-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-tag-bg);
+  color: var(--color-ink-muted);
+  border: var(--border);
+  text-decoration: none;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+  display: inline-block;
+}
+.stream-tag:hover,
+.stream-tag[aria-current] {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+/* --- Post list --- */
+.post-list { padding: 0 var(--space-10); }
+.post-item {
+  padding: var(--space-6) 0;
+  border-bottom: var(--border);
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 0 var(--space-6);
+  align-items: start;
+}
+.post-item:last-child { border-bottom: none; }
+.post-item__date {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-snug);
+  padding-top: 4px;
+}
+.post-item__tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.post-item__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--color-ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: var(--space-2);
+  transition: color 0.15s ease;
+}
+.post-item__title:hover { color: var(--color-accent); }
+.post-item__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+}
+
+/* --- Article / post page --- */
+.article-wrap {
+  background: var(--color-bg-alt);
+  padding: var(--space-12) var(--space-10);
+  border-top: 2px solid var(--color-rule);
+}
+.article-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-6);
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+.article-meta__tag { color: var(--color-accent); }
+.article-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+.article-title em { font-style: italic; color: var(--color-accent); }
+.article-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--color-ink-muted);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-8);
+}
+.article-rule {
+  border: none;
+  border-top: var(--border);
+  margin: var(--space-6) 0;
+}
+
+/* --- Article body prose --- */
+.prose { max-width: var(--max-content); }
+.prose p {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-bottom: var(--space-5);
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--color-ink);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-ink);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(92,98,40,0.4);
+  transition: text-decoration-color 0.15s ease;
+}
+.prose a:hover { text-decoration-color: var(--color-accent); }
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-5);
+  margin: var(--space-8) 0;
+  font-style: italic;
+  color: var(--color-ink-muted);
+  font-size: 1.02rem;
+  line-height: var(--leading-normal);
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--color-tag-bg);
+  padding: 0 var(--space-1);
+  border: var(--border);
+  color: var(--color-accent);
+}
+.prose pre {
+  background: var(--color-bg-alt);
+  border: var(--border);
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-5) var(--space-6);
+  overflow-x: auto;
+  margin: var(--space-6) 0;
+}
+.prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+
+/* --- Footer --- */
+.site-footer {
+  border-top: var(--border);
+  padding: var(--space-8) var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  background: var(--color-bg-alt);
+}
+.site-footer p {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  letter-spacing: var(--tracking-wide);
+}
+.site-footer__feeds { display: flex; gap: var(--space-4); }
+.site-footer__feeds a {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.site-footer__feeds a:hover { color: var(--color-accent); }
+
+/* ==========================================================================
+   RESPONSIVE — Mobile first
+   ========================================================================== */
+@media (max-width: 640px) {
+  .site-nav, .site-hero, .stream-bar, .post-list, .article-wrap, .site-footer {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+  .site-hero { padding-top: var(--space-10); }
+  .site-hero h1 { font-size: var(--text-2xl); }
+  .post-item { grid-template-columns: 1fr; gap: var(--space-1); }
+  .post-item__date { padding-top: 0; }
+  .article-title { font-size: var(--text-xl); }
+  .sg-two-col { grid-template-columns: 1fr; }
+  .sg-three-col { grid-template-columns: 1fr; }
+  .sg-palette { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="sg-page">
+
+  <!-- ===== MASTHEAD ===== -->
+  <header class="sg-masthead">
+    <span class="sg-masthead-eyebrow">Style Direction v1.1 — Hunter Palette — Mar 2026</span>
+    <h1>pistolas<em>.co.uk</em></h1>
+    <p>The canonical design reference for the personal blog of Savva Pistolas. All colour values, typographic choices, spacing decisions, and component patterns are defined here. This document also serves as the seed CSS for the Eleventy build.</p>
+  </header>
+
+  <!-- ===== 01. DESIGN PRINCIPLES ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">01</span>
+      <h2>Design Principles</h2>
+    </div>
+    <div class="sg-section-body">
+      <div class="sg-principle">
+        <strong>Content is the design</strong>
+        <p>The typography, spacing, and colour exist entirely in service of readability. No decorative elements that don't carry information. Every choice should disappear into the reading experience.</p>
+      </div>
+      <div class="sg-principle">
+        <strong>Intentioned design, not minimalism</strong>
+        <p>This is not a minimal site — it is a considered one. Decorative and visual elements are welcome, particularly on the homepage, provided they are elegant and earn their place. The question is never "is this minimal?" but "does this belong?" Stock filler and visual noise are refused; meaningful illustration, diagrams, and imagery are embraced.</p>
+      </div>
+      <div class="sg-principle">
+        <strong>Honest and personal</strong>
+        <p>No marketing language. No "hero" photography. No fake CTAs. The writing is the product. The design signals that the author has taste and ideas, not that they're selling something.</p>
+      </div>
+      <div class="sg-principle">
+        <strong>Multi-stream without confusion</strong>
+        <p>Security, systems, and other topics coexist. The stream tag is the only signal needed — no separate visual identities per topic. A reader following everything should feel coherence, not category chaos.</p>
+      </div>
+      <div class="sg-principle">
+        <strong>Performance is a value</strong>
+        <p>No JavaScript frameworks. No tracking pixels. No cookie banners. Three Google Font families loaded once. Everything else is HTML and CSS. Fast everywhere, including on mobile data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02. COLOUR PALETTE ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">02</span>
+      <h2>Colour Palette — Hunter</h2>
+    </div>
+    <div class="sg-section-body">
+      <span class="sg-label">Named palette: Hunter</span>
+      <div class="sg-palette">
+        <div class="sg-swatch" style="background:#F3F5F2; color:#161C15; border-bottom:none;">
+          <span class="sg-swatch-name">Background</span>
+          <span class="sg-swatch-hex">--color-bg · #F3F5F2</span>
+          <span class="sg-swatch-role">Cool near-white with a faint green breath. Primary page background. Crisper than parchment, never clinical.</span>
+        </div>
+        <div class="sg-swatch" style="background:#E6EAE5; color:#161C15; border-bottom:none;">
+          <span class="sg-swatch-name">Background Alt</span>
+          <span class="sg-swatch-hex">--color-bg-alt · #E6EAE5</span>
+          <span class="sg-swatch-role">Article sections, code blocks, tag chips. A shade deeper — sage-grey.</span>
+        </div>
+        <div class="sg-swatch" style="background:#C2CAC2; color:#161C15; border-bottom:none;">
+          <span class="sg-swatch-name">Rule</span>
+          <span class="sg-swatch-hex">--color-rule · #C2CAC2</span>
+          <span class="sg-swatch-role">All borders and dividing lines. Cool grey-green, consistent with the background's undertone.</span>
+        </div>
+        <div class="sg-swatch" style="background:#4A564A; color:#F3F5F2; border-bottom:none;">
+          <span class="sg-swatch-name">Ink Muted</span>
+          <span class="sg-swatch-hex">--color-ink-muted · #4A564A</span>
+          <span class="sg-swatch-role">Metadata, dates, captions, nav links, secondary prose. Forest grey.</span>
+        </div>
+        <div class="sg-swatch" style="background:#2B5C38; color:#F3F5F2; border-bottom:none;">
+          <span class="sg-swatch-name">Accent</span>
+          <span class="sg-swatch-hex">--color-accent · #2B5C38</span>
+          <span class="sg-swatch-role">Links, stream tags (active), post tags, blockquote rule, inline code. Deep bottle green.</span>
+        </div>
+        <div class="sg-swatch" style="background:#161C15; color:#F3F5F2; border-bottom:none;">
+          <span class="sg-swatch-name">Ink</span>
+          <span class="sg-swatch-hex">--color-ink · #161C15</span>
+          <span class="sg-swatch-role">Primary body text. Near-black with a trace of forest in it. Never pure #000.</span>
+        </div>
+      </div>
+    </div>
+    <div class="sg-section-body">
+      <span class="sg-label">Palette rationale</span>
+      <p style="font-family: var(--font-body); font-size: var(--text-sm); line-height: var(--leading-normal); color: var(--color-ink-muted); max-width: 620px;">
+        The Hunter palette sits in the deep forest end of the green spectrum — confident, grounded, and slightly botanical. 
+        The background has a faint green breath rather than a warm yellow cast, which reads as crisper and more precise than parchment. 
+        The accent is a true bottle green: saturated enough to carry real weight as a link colour and active tag, 
+        restrained enough not to shout. Chosen over olive (too antiquarian, too close to mustard) and orange/copper 
+        (too warm, too close to Anthropic's brand identity). 
+        The palette has associations with field guides, Ordnance Survey maps, and military technical documentation — 
+        all appropriate registers for someone writing about security, systems, and rigorous thinking.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 03. TYPOGRAPHY ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">03</span>
+      <h2>Typography</h2>
+    </div>
+
+    <!-- Font families -->
+    <div class="sg-section-body">
+      <span class="sg-label">Font families</span>
+
+      <div class="sg-font-specimen">
+        <div class="sg-font-specimen-meta">
+          <span class="sg-font-name">--font-display</span>
+          <span>'Playfair Display'</span>
+          <span>Google Fonts · Display / Headlines</span>
+          <span>Weights: 700, 800 · Italic: 400i, 700i</span>
+        </div>
+        <div class="sg-font-specimen-body">
+          <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.12; color: var(--color-ink); margin-bottom: 0.5rem;">
+            Thinking in <em>systems,</em> working in security.
+          </div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; color: var(--color-ink); margin-bottom: 0.5rem;">
+            Why Cyber Essentials Plus still gets the basics wrong
+          </div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; font-weight: 400; color: var(--color-ink-muted);">
+            Italic: The Viable System Model and recursive accountability
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-font-specimen">
+        <div class="sg-font-specimen-meta">
+          <span class="sg-font-name">--font-body</span>
+          <span>'Lora'</span>
+          <span>Google Fonts · Body / Prose</span>
+          <span>Weights: 400, 500 · Italic: 400i</span>
+        </div>
+        <div class="sg-font-specimen-body">
+          <p style="font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.82; color: var(--color-ink); max-width: 600px; margin-bottom: 1rem;">
+            There's a version of Cyber Essentials that would make a real difference to small organisations' security posture. The one that exists is not quite that. After running a dozen CE+ assessments this year, a pattern becomes hard to ignore. The evidence requirements create incentives for theatre rather than substance.
+          </p>
+          <p style="font-family: 'Lora', serif; font-size: 1.02rem; font-style: italic; line-height: 1.7; color: var(--color-ink-muted); max-width: 560px; border-left: 3px solid var(--color-accent); padding-left: 1.25rem;">
+            Italic / blockquote: The problem isn't with the controls themselves — patch management, MFA, network boundaries. The problem is in what counts as evidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="sg-font-specimen">
+        <div class="sg-font-specimen-meta">
+          <span class="sg-font-name">--font-mono</span>
+          <span>'Source Code Pro'</span>
+          <span>Google Fonts · Metadata / UI labels / Code</span>
+          <span>Weights: 400, 500</span>
+        </div>
+        <div class="sg-font-specimen-body" style="background: var(--color-bg-alt);">
+          <div style="font-family: 'Source Code Pro', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ink-muted); margin-bottom: 0.75rem;">
+            Nav: writing · security · systems · now · about
+          </div>
+          <div style="font-family: 'Source Code Pro', monospace; font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem;">
+            Tag: Security · Systems · Now · Making
+          </div>
+          <div style="font-family: 'Source Code Pro', monospace; font-size: 0.67rem; color: var(--color-ink-muted); margin-bottom: 0.75rem;">
+            Date: 27 Feb 2026
+          </div>
+          <code style="font-family: 'Source Code Pro', monospace; font-size: 0.85rem; background: var(--color-tag-bg); border: 1px solid var(--color-rule); padding: 1px 5px; color: var(--color-accent);">adequate_firewall_config</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <div class="sg-section-body">
+      <span class="sg-label">Type scale (Major Third — ×1.25)</span>
+      <table class="sg-type-scale">
+        <tr>
+          <td class="tc-name">--text-xs</td>
+          <td class="tc-value">0.64rem</td>
+          <td class="tc-sample" style="font-size: 0.64rem; font-family: var(--font-mono);">Labels, metadata, nav links, tags — ALL CAPS</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-sm</td>
+          <td class="tc-value">0.80rem</td>
+          <td class="tc-sample" style="font-size: 0.80rem; font-family: var(--font-body);">Captions, footnotes, secondary descriptions</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-base</td>
+          <td class="tc-value">1.00rem</td>
+          <td class="tc-sample" style="font-size: 1.00rem; font-family: var(--font-body);">Base size (body uses 1.05rem for comfort)</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-md</td>
+          <td class="tc-value">1.05rem</td>
+          <td class="tc-sample" style="font-size: 1.05rem; font-family: var(--font-body);">Body copy — article prose, post descriptions</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-lg</td>
+          <td class="tc-value">1.25rem</td>
+          <td class="tc-sample" style="font-size: 1.25rem;">Post list titles</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-xl</td>
+          <td class="tc-value">1.56rem</td>
+          <td class="tc-sample" style="font-size: 1.56rem;">Section headings within articles (h2)</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-2xl</td>
+          <td class="tc-value">1.95rem</td>
+          <td class="tc-sample" style="font-size: 1.95rem;">Article page title</td>
+        </tr>
+        <tr>
+          <td class="tc-name">--text-3xl</td>
+          <td class="tc-value">2.44rem</td>
+          <td class="tc-sample" style="font-size: 2.44rem;">Homepage hero heading</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Typographic rules -->
+    <div class="sg-section-body">
+      <span class="sg-label">Typographic rules</span>
+      <div class="sg-two-col">
+        <div>
+          <div class="sg-principle">
+            <strong>Display font usage</strong>
+            <p>Playfair Display for all headings: hero h1, article titles, post list titles, section h2/h3 within articles. Never used for body copy or UI labels.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Mono font usage</strong>
+            <p>Source Code Pro for all UI chrome: navigation links, stream tags, post dates, article metadata (date, read time), inline code, and code blocks. All nav/tag text is uppercase with wide tracking.</p>
+          </div>
+        </div>
+        <div>
+          <div class="sg-principle">
+            <strong>Italic as accent</strong>
+            <p>Playfair's italic is beautiful — use it with intent. Hero h1 italicises one key word (often a verb or concept). Article titles may italic a phrase. Lora italic used for blockquotes and subtitles only.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Letter spacing rules</strong>
+            <p>Display text: tight (–0.025em). Body: 0. Mono UI labels: wide (+0.10em). Mono tags/dates: very wide (+0.14em). Never letter-space body text or Lora prose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04. SPACING & LAYOUT ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">04</span>
+      <h2>Spacing &amp; Layout</h2>
+    </div>
+    <div class="sg-section-body">
+      <div class="sg-two-col">
+        <div>
+          <span class="sg-label">Key layout values</span>
+          <div class="sg-token-grid" style="grid-template-columns: 1fr;">
+            <div class="sg-token">
+              <span class="sg-token-name">--max-content</span>
+              <span class="sg-token-value">680px</span>
+              <span class="sg-token-desc">Maximum width for article body prose. Enforces comfortable line length (~70–75 chars at 1.05rem).</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">--max-site</span>
+              <span class="sg-token-value">900px</span>
+              <span class="sg-token-desc">Maximum width for the overall site chrome — nav, hero, post list. Keeps the site feeling focused on any screen.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="sg-label">Spacing philosophy</span>
+          <div class="sg-principle">
+            <strong>Generous vertical rhythm</strong>
+            <p>The site breathes. Post items get 26px top/bottom padding. Hero gets 64px top. Sections are separated by borders, not extra margin. Whitespace is structural, not decorative.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Consistent horizontal gutters</strong>
+            <p>All content areas use 40px (--space-10) left/right padding on desktop, 20px on mobile. Nav, hero, stream bar, post list, and article all align to the same left edge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05. COMPONENTS ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">05</span>
+      <h2>Components — Live Examples</h2>
+    </div>
+
+    <!-- Navigation -->
+    <div class="sg-section-body">
+      <span class="sg-label">Navigation bar</span>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <nav class="site-nav" style="max-width:none;">
+          <a class="site-nav__name" href="#">Savva Pistolas</a>
+          <ul class="site-nav__links">
+            <li><a href="#" aria-current="page">Writing</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Systems</a></li>
+            <li><a href="#">Now</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="sg-section-body">
+      <span class="sg-label">Homepage hero</span>
+      <p style="font-family: var(--font-body); font-size: var(--text-xs); font-style: italic; color: var(--color-ink-muted); margin-bottom: var(--space-4); line-height: 1.6;">The homepage is the one context where decorative visual content is actively encouraged — a typographic mark, an illustration, a geometric motif, or a considered background treatment are all in scope, provided they feel earned and elegant. The hero text always sits above or alongside any decoration; it is never obscured by it.</p>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <div class="site-hero" style="max-width:none;">
+          <h1>Thinking in <em>systems,</em><br>working in security.</h1>
+          <p>Technical Director at ADAS. I write about cybersecurity, management cybernetics, information systems, and the occasional thing that doesn't fit anywhere else.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stream tags -->
+    <div class="sg-section-body">
+      <span class="sg-label">Stream filter bar</span>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <div class="stream-bar" style="padding-left: var(--space-8);">
+          <a class="stream-tag" href="#" aria-current="true">All</a>
+          <a class="stream-tag" href="#">Security</a>
+          <a class="stream-tag" href="#">Systems</a>
+          <a class="stream-tag" href="#">Now</a>
+          <a class="stream-tag" href="#">Making</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post list -->
+    <div class="sg-section-body">
+      <span class="sg-label">Post list items</span>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <div class="post-list">
+          <div class="post-item">
+            <div class="post-item__date">27 Feb<br>2026</div>
+            <div>
+              <span class="post-item__tag">Security</span>
+              <a class="post-item__title" href="#">Why Cyber Essentials Plus still gets the basics wrong</a>
+              <p class="post-item__desc">The assessment framework is well-intentioned but evidence requirements create perverse incentives for organisations who already do good security.</p>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-item__date">18 Feb<br>2026</div>
+            <div>
+              <span class="post-item__tag">Systems</span>
+              <a class="post-item__title" href="#">Beer's VSM and the problem of recursive accountability</a>
+              <p class="post-item__desc">A short note on how the Viable System Model handles audit functions and why most organisations implement it backwards.</p>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-item__date">10 Feb<br>2026</div>
+            <div>
+              <span class="post-item__tag">Now</span>
+              <a class="post-item__title" href="#">TIL: Abusing RFC 5424 structured data fields in creative ways</a>
+              <p class="post-item__desc">A small discovery about syslog that surprised me enough to write down.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article -->
+    <div class="sg-section-body">
+      <span class="sg-label">Article / post page</span>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <div class="article-wrap" style="border-top: none;">
+          <div class="article-meta">
+            <span>27 Feb 2026</span>
+            <span class="article-meta__tag">Security</span>
+            <span>8 min read</span>
+          </div>
+          <h1 class="article-title">Why Cyber Essentials Plus still gets the <em>basics</em> wrong</h1>
+          <p class="article-subtitle">The framework is well-intentioned, but evidence requirements create perverse incentives for organisations already doing good security.</p>
+          <hr class="article-rule">
+          <div class="prose">
+            <p>There's a version of Cyber Essentials that would make a real difference to small organisations' security posture. The one that exists is not quite that. After running a dozen CE+ assessments this year, a pattern becomes hard to ignore.</p>
+            <blockquote>The problem isn't with the controls themselves — patch management, MFA, network boundaries. The problem is in what counts as evidence.</blockquote>
+            <p>When you ask an assessor what <code>adequate_firewall_config</code> means in practice, you often get a different answer than the last assessor gave. This isn't incompetence — it's structural ambiguity baked into the scheme. The documentation gestures at intent without specifying method.</p>
+            <h2>The evidence problem</h2>
+            <p>Most CE+ assessors will accept a screenshot of a settings panel as evidence of a control being in place. Some will want a policy document. A few will want both. Almost none will ask whether the control is actually doing what it's supposed to do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="sg-section-body">
+      <span class="sg-label">Site footer</span>
+      <div class="sg-preview" style="padding: 0; background: var(--color-bg);">
+        <footer class="site-footer">
+          <p>© 2026 Savva Pistolas</p>
+          <div class="site-footer__feeds">
+            <a href="#">RSS — All</a>
+            <a href="#">RSS — Security</a>
+            <a href="#">RSS — Systems</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06. VOICE & CONTENT ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">06</span>
+      <h2>Voice &amp; Content Conventions</h2>
+    </div>
+    <div class="sg-section-body">
+      <div class="sg-two-col">
+        <div>
+          <span class="sg-label">Post frontmatter (Eleventy)</span>
+          <div style="background: var(--color-bg-alt); border: var(--border); border-left: 3px solid var(--color-accent); padding: var(--space-5);">
+            <pre style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-ink); line-height: 1.8; overflow-x: auto;">---
+title: "Why CE+ still gets the basics wrong"
+date: 2026-02-27
+description: >
+  The framework is well-intentioned, but evidence
+  requirements create perverse incentives.
+tags:
+  - security
+  - post
+stream: security
+readingTime: 8
+og_image: /assets/posts/ce-plus-basics/og.png
+---</pre>
+          </div>
+          <p style="font-family: var(--font-body); font-size: var(--text-xs); font-style: italic; color: var(--color-ink-muted); margin-top: var(--space-3); line-height: 1.6;">The <code style="font-size:0.75em;">stream</code> field drives the filter bar. The <code style="font-size:0.75em;">description</code> appears as the article subtitle and in OG meta tags. Always write a description — it's your SEO and social preview in one.</p>
+        </div>
+        <div>
+          <span class="sg-label">Writing conventions</span>
+          <div class="sg-principle">
+            <strong>Date format</strong>
+            <p>Always "27 Feb 2026" — not ISO, not US format. Readable, unambiguous, and slightly European.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Post titles</strong>
+            <p>Sentence case, not Title Case. Titles are thoughts, not headlines. Italicise one key concept where Playfair's italic can do work.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Stream names</strong>
+            <p>Security · Systems · Now · Making. Capitalised, single word where possible. "Now" is for short notes, discoveries, and TILs. Streams are fixed — resist creating new ones.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Image conventions</strong>
+            <p>Every post should include an <code style="font-size:0.8em;">og_image</code> frontmatter field pointing to a social thumbnail (1200×630px). In-post diagrams live in <code style="font-size:0.8em;">/assets/posts/[slug]/</code>. Images use descriptive <code style="font-size:0.8em;">alt</code> text always. No captions unless the image genuinely requires one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07. WHAT THIS IS NOT ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">07</span>
+      <h2>Anti-patterns — What to Avoid</h2>
+    </div>
+    <div class="sg-section-body">
+      <div class="sg-three-col">
+        <div class="sg-principle">
+          <strong>Images must be intentional</strong>
+          <p>Images are expected and welcome: every post should have an OG/social thumbnail, diagrams and illustrations are encouraged where they add to the argument, and the homepage may carry decorative visual content where it is elegant and meaningful. No stock photography, no decorative filler. If it doesn't earn its space, it doesn't ship.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>No JavaScript</strong>
+          <p>The site ships zero JS to the browser (search can be the exception, implemented as a static JSON index). No analytics, no comment widgets, no share buttons.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>No font mixing</strong>
+          <p>Three font families, fixed roles, no exceptions. Do not use Playfair for body text at any size. Do not use Lora for navigation. Do not introduce a fourth family.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>No colour additions</strong>
+          <p>The 6 palette colours plus pure white (for the label bars) are the only colours used. No additional accents, no per-stream colour coding, no gradient experiments.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>No rounded corners</strong>
+          <p>Everything is square-edged. Borders are straight lines. This is a document aesthetic, not an app aesthetic. Border-radius: 0 everywhere.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>No hover animations</strong>
+          <p>Colour transitions on links and tags only (0.15s ease). No transforms, no scale effects, no box-shadow reveals. Motion should be invisible, not decorative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08. VISUAL ARTEFACTS & IMAGE DESIGN ===== -->
+  <section class="sg-section">
+    <div class="sg-section-header">
+      <span class="sg-section-num">08</span>
+      <h2>Visual Artefacts &amp; Image Design</h2>
+    </div>
+
+    <!-- Philosophy -->
+    <div class="sg-section-body">
+      <span class="sg-label">Philosophy</span>
+      <p style="font-family:var(--font-body);font-size:var(--text-md);line-height:var(--leading-relaxed);color:var(--color-ink);max-width:640px;margin-bottom:var(--space-5);">All visual artefacts — OG thumbnails, in-post diagrams, homepage illustrations — must feel like they belong to the same object as the site. An image that looks like it was generated by a different tool, designed for a different brand, or sourced from a stock library will rupture the reading experience. The palette, type, and spatial logic of the site extend into every image.</p>
+      <div class="sg-principle">
+        <strong>The single rule</strong>
+        <p>If an image were placed next to the site's nav bar, would it look like it came from the same hand? If not, it doesn't ship. Palette consistency is non-negotiable. Typographic consistency is strongly preferred.</p>
+      </div>
+    </div>
+
+    <!-- Palette application -->
+    <div class="sg-section-body">
+      <span class="sg-label">Palette application in images</span>
+      <p style="font-family:var(--font-body);font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--color-ink-muted);max-width:620px;margin-bottom:var(--space-5);">Images draw from the same six-token palette as the site. Photography is the exception (it carries its own colours) but should be processed to feel tonally warm rather than cool or oversaturated. Diagrams, illustrations, and thumbnails are created entirely within the palette.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--space-4);">
+
+        <!-- OG Thumbnail mock -->
+        <div>
+          <span class="sg-label">OG thumbnail — 1200 × 630px</span>
+          <div style="aspect-ratio:1200/630;background:#E6EAE5;border:var(--border);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;position:relative;overflow:hidden;">
+            <!-- decorative corner mark -->
+            <div style="position:absolute;top:24px;right:24px;width:48px;height:48px;border:2px solid #C2CAC2;"></div>
+            <div style="position:absolute;top:30px;right:30px;width:48px;height:48px;border:2px solid #2B5C38;opacity:0.4;"></div>
+            <!-- stream tag -->
+            <span style="font-family:'Source Code Pro',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:#2B5C38;margin-bottom:10px;display:block;">Security</span>
+            <!-- title -->
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#161C15;margin-bottom:10px;">Why CE+ still gets the <em style="color:#2B5C38;">basics</em> wrong</div>
+            <!-- byline -->
+            <div style="font-family:'Source Code Pro',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#4A564A;">pistolas.co.uk · 27 Feb 2026</div>
+            <!-- top rule -->
+            <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#2B5C38;"></div>
+          </div>
+          <p style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:var(--color-ink-muted);margin-top:var(--space-2);line-height:1.5;">Background: --color-bg-alt. Title in Playfair Display 800. Stream tag + byline in Source Code Pro. Top rule in --color-accent. Decorative geometry in --color-rule. No photography.</p>
+        </div>
+
+        <!-- Diagram mock -->
+        <div>
+          <span class="sg-label">In-post diagram</span>
+          <div style="background:#F3F5F2;border:var(--border);padding:28px;font-family:'Source Code Pro',monospace;">
+            <!-- simple VSM-style boxes -->
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
+              <div style="border:1px solid #2B5C38;padding:8px 20px;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:#2B5C38;width:180px;text-align:center;">System 5 — Policy</div>
+              <div style="width:1px;height:12px;background:#C2CAC2;"></div>
+              <div style="border:1px solid #C2CAC2;padding:8px 20px;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:#4A564A;width:180px;text-align:center;">System 4 — Intelligence</div>
+              <div style="width:1px;height:12px;background:#C2CAC2;"></div>
+              <div style="border:1px solid #C2CAC2;padding:8px 20px;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:#4A564A;width:180px;text-align:center;">System 3 — Control</div>
+              <div style="width:1px;height:12px;background:#C2CAC2;"></div>
+              <div style="display:flex;gap:8px;">
+                <div style="border:1px solid #C2CAC2;padding:8px 12px;font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:#4A564A;text-align:center;">Op. Unit A</div>
+                <div style="border:1px solid #C2CAC2;padding:8px 12px;font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:#4A564A;text-align:center;">Op. Unit B</div>
+              </div>
+            </div>
+            <div style="font-family:'Lora',serif;font-size:0.72rem;font-style:italic;color:#4A564A;text-align:center;margin-top:16px;border-top:1px solid #C2CAC2;padding-top:10px;">Fig. 1 — Simplified VSM hierarchy</div>
+          </div>
+          <p style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:var(--color-ink-muted);margin-top:var(--space-2);line-height:1.5;">SVG preferred for diagrams. All strokes from --color-rule or --color-accent. Labels in Source Code Pro. Figure captions in Lora italic. White or --color-bg background only.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- OG thumbnail spec -->
+    <div class="sg-section-body">
+      <span class="sg-label">OG thumbnail — full specification</span>
+      <div class="sg-two-col">
+        <div>
+          <div class="sg-token-grid" style="grid-template-columns:1fr;">
+            <div class="sg-token">
+              <span class="sg-token-name">Dimensions</span>
+              <span class="sg-token-value">1200 × 630px</span>
+              <span class="sg-token-desc">Standard OG size. Renders well on Twitter/X cards, LinkedIn, iMessage link previews.</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">Background</span>
+              <span class="sg-token-value">--color-bg-alt (#E6EAE5)</span>
+              <span class="sg-token-desc">The slightly deeper sage-grey. Gives contrast against both --color-bg browser backgrounds and dark social feeds.</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">Top rule</span>
+              <span class="sg-token-value">4px solid --color-accent</span>
+              <span class="sg-token-desc">The single most recognisable brand mark. Every thumbnail has this. It ties the image to the site nav visually.</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">Title type</span>
+              <span class="sg-token-value">Playfair Display 800, ~52–64px</span>
+              <span class="sg-token-desc">Scale to fit. Max 2 lines. One key word or phrase in italic --color-accent. Remainder in --color-ink.</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">Stream + byline</span>
+              <span class="sg-token-value">Source Code Pro 400, ~18px, uppercase</span>
+              <span class="sg-token-desc">Stream tag in --color-accent above the title. "pistolas.co.uk · DD Mon YYYY" in --color-ink-muted below.</span>
+            </div>
+            <div class="sg-token">
+              <span class="sg-token-name">Decoration</span>
+              <span class="sg-token-value">Optional geometric mark</span>
+              <span class="sg-token-desc">A square, nested squares, or corner rule in --color-rule at low opacity. No gradients, no photographs, no icons from other systems.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sg-principle">
+            <strong>Generating with AI tools</strong>
+            <p>OG thumbnails are typography-first and can be generated programmatically. A Satori (Vercel) or sharp-based Node script at build time can produce every thumbnail automatically from frontmatter — no manual Figma work needed. The 11ty build pipeline can call this as a transform.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Generating manually (Figma / Sketch)</strong>
+            <p>Use the exact hex values from this document. Import Playfair Display and Source Code Pro from Google Fonts. Start from a template frame — do not design each one from scratch. The template has the top rule, corner decoration, and type hierarchy locked; only the title text and stream tag change per post.</p>
+          </div>
+          <div class="sg-principle">
+            <strong>Generating with image AI (Midjourney / DALL-E)</strong>
+            <p>Not recommended for thumbnails — AI image tools cannot reliably reproduce the palette or typeset Playfair Display. Use them only for illustrative in-post images where photographic or illustrative content is genuinely needed, then place those images within a consistent framing (border rule, caption) defined in the site CSS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- In-post image rules -->
+    <div class="sg-section-body">
+      <span class="sg-label">In-post image guidelines</span>
+      <div class="sg-three-col">
+        <div class="sg-principle">
+          <strong>Diagrams &amp; technical figures</strong>
+          <p>Always SVG where possible. Draw using only palette colours. Strokes: 1px --color-rule for structure, 1–2px --color-accent for emphasis. Fill: --color-bg or --color-bg-alt. Labels: Source Code Pro, uppercase. Figure caption: Lora italic below in --color-ink-muted. Export at 2× for retina.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>Photographs &amp; screenshots</strong>
+          <p>Screenshots should be taken on a light OS theme with window chrome removed where possible. Crop tightly. Apply a 1px --color-rule border in CSS (not baked into the image). Photographs should be cool-to-neutral toned; heavily warm or saturated photos can clash with the sage-grey background. No drop shadows.</p>
+        </div>
+        <div class="sg-principle">
+          <strong>Homepage decorative images</strong>
+          <p>The homepage may use a single decorative visual element: a geometric illustration, an abstract mark, or a considered typographic composition. It must use only palette colours. It should feel like it was drawn specifically for this site. Size: contained within the hero area, never full-bleed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colour reference card for image creation -->
+    <div class="sg-section-body">
+      <span class="sg-label">Quick reference — palette hex values for image creation</span>
+      <p style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:var(--color-ink-muted);margin-bottom:var(--space-4);line-height:1.5;">Copy these directly into Figma, Illustrator, or any image generation prompt. When prompting AI image tools, describe the palette as: "cool near-white background (#F3F5F2), deep bottle green accents (#2B5C38), near-black ink (#161C15), crisp sage-grey tones — no warm yellows, no saturated colours, no pure white backgrounds."</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0;border:var(--border);">
+        <div style="background:#F3F5F2;padding:var(--space-5) var(--space-4) var(--space-3);border-right:var(--border);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#161C15;letter-spacing:0.06em;">BG</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#4A564A;margin-top:2px;">#F3F5F2</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#4A564A;margin-top:4px;line-height:1.4;">Page bg, thumbnail bg</div>
+        </div>
+        <div style="background:#E6EAE5;padding:var(--space-5) var(--space-4) var(--space-3);border-right:var(--border);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#161C15;letter-spacing:0.06em;">BG ALT</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#4A564A;margin-top:2px;">#E6EAE5</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#4A564A;margin-top:4px;line-height:1.4;">OG thumbnail bg, diagram fills</div>
+        </div>
+        <div style="background:#C2CAC2;padding:var(--space-5) var(--space-4) var(--space-3);border-right:var(--border);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#161C15;letter-spacing:0.06em;">RULE</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#161C15;margin-top:2px;">#C2CAC2</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#161C15;margin-top:4px;line-height:1.4;">Diagram strokes, decorative geometry</div>
+        </div>
+        <div style="background:#4A564A;padding:var(--space-5) var(--space-4) var(--space-3);border-right:var(--border);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#F3F5F2;letter-spacing:0.06em;">MUTED</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#E6EAE5;margin-top:2px;">#4A564A</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#E6EAE5;margin-top:4px;line-height:1.4;">Captions, secondary labels</div>
+        </div>
+        <div style="background:#2B5C38;padding:var(--space-5) var(--space-4) var(--space-3);border-right:var(--border);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#F3F5F2;letter-spacing:0.06em;">ACCENT</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#E6EAE5;margin-top:2px;">#2B5C38</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#E6EAE5;margin-top:4px;line-height:1.4;">Top rule, italic text, key strokes</div>
+        </div>
+        <div style="background:#161C15;padding:var(--space-5) var(--space-4) var(--space-3);">
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);font-weight:500;color:#F3F5F2;letter-spacing:0.06em;">INK</div>
+          <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:#E6EAE5;margin-top:2px;">#161C15</div>
+          <div style="font-family:var(--font-body);font-size:var(--text-xs);font-style:italic;color:#E6EAE5;margin-top:4px;line-height:1.4;">Title text, diagram labels</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end .sg-page -->
+</body>
+</html>

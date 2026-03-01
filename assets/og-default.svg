@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Lora:ital@0,1&amp;display=swap');
-      .name  { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 96px; fill: #1C1C14; }
-      .suf   { font-family: 'Lora', Georgia, serif; font-weight: 400; font-style: italic; font-size: 64px; fill: #585644; }
-      .url   { font-family: 'Lora', Georgia, serif; font-weight: 400; font-size: 28px; fill: #585644; letter-spacing: 0.05em; }
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap');
+      .name  { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 96px; fill: #F3F5F2; }
+      .suf   { font-family: 'Lora', Georgia, serif; font-weight: 400; font-style: italic; font-size: 64px; fill: #E6EAE5; }
+      .url   { font-family: 'Lora', Georgia, serif; font-weight: 400; font-size: 28px; fill: #C2CAC2; letter-spacing: 0.05em; }
     </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="#F9F7ED"/>
+  <!-- Background: olive green -->
+  <rect width="1200" height="630" fill="#2B5C38"/>
 
   <!-- Left accent bar -->
-  <rect x="80" y="180" width="4" height="230" fill="#5C6228"/>
+  <rect x="80" y="180" width="4" height="230" fill="#C2CAC2"/>
 
   <!-- "Savva Pistolas'" -->
   <text class="name" x="112" y="290">Savva Pistolas&#x2019;</text>
@@ -21,7 +21,7 @@
   <text class="suf" x="116" y="370">website</text>
 
   <!-- Horizontal rule -->
-  <line x1="112" y1="408" x2="1120" y2="408" stroke="#5C6228" stroke-width="1.5"/>
+  <line x1="112" y1="408" x2="1120" y2="408" stroke="#C2CAC2" stroke-width="1.5"/>
 
   <!-- URL -->
   <text class="url" x="112" y="450">pistolas.co.uk</text>
