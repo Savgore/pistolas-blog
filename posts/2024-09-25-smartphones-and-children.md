@@ -1,7 +1,7 @@
 ---
 title: "smartphones and children"
 date: 2024-09-25
-description: ""
+description: "Reflecting on the landscape of children using smartphones"
 tags:
   - post
   - systems
@@ -9,5 +9,17 @@ tags:
 permalink: /smartphones-and-children/
 og_image: /assets/og-default.png
 ---
+<i> reflections after reading '[Only 3% of UK 12-year-olds don’t have a smartphone. Here is how four of them feel about it](https://www.theguardian.com/technology/2024/sep/23/children-who-dont-have-smartphones)' on the Grauniad. </i>
 
-<!-- PASTE VERBATIM POST BODY HERE -->
+Whenever we talk about smartphones and their impact we discuss the situation forgetting that "It is what it is" is actually "It is what the tech monopolists have spent billions making sure it is". The smartphone itself is a wonderful tool that uses radio waves to send signals between endpoints in a rather vast network. The issue of course is going to be what is sent back and forth, and any mediums that exist in those spaces that have incentives outside of communication that mirrors or assists communication in the physical world.
+
+No more often is this evident than in the conversations had by adults about how children use technology. In these conversations, the smartphone is inseparable from the services it enables. You can't fault people for bundling the two into one, as for most the former is simply the physical prerequisite for the latter. I am always struck by just how much compromise we have to make with these devices; if you want your child to be able to call for an ambulance, keep in touch with their friends digitally, be able to call you to let you know to come and pick them up, then you must also expect to fork over the right to access a large swathe of their developmental years to a digital monopolist who has a direct profit incentive to make them miserable, insecure, alienated, and unhealthy. 
+
+### internal behaviour between peers 
+These internal social behaviours and the digital spaces they occur in are not essential characteristics of the social lives of children, but instead the consequences of anti-social design. Snapchat and Instagram game-ify every single facet of communication, with scoring systems on every interaction, and a lack of accountability built into the platforms. This allows and encourages hit-and-run dopamine hits on your peers without suitable mechanisms for recognising harm, facilitating apologies and return to group wellbeing. They are systems that produce individuated and individuating young people, with no infrastructure for responsibility or collectivism in the software that enables the majority of their communication. In person communication then becomes a byproduct of their digital life, a reaction to the conversations spun up in broken-by-design apps.
+### external influences on children
+Equally as egregious is the allowance for a child to be bombarded by consumerist forces as soon as they are given a device that facilitates the development of a digital identity. Advertisements baked into every single platform dictate to the child who they will fail to be until they look or act a certain way. Swamped in the individuating infrastructure of the modern internet, the only economy of change is in what you and yours buy, and how you and yours present it online. Influencers and other forms of soft-power serving global economic commercial interests spend more deep engaged, face-to-face time with children than their parents, embedding rhetoric that is not subject to accountability from fully developed adults, while ensuring a faith-like commitment to a set of ideals or ideas that are realised online but devoid of all authorship or critical thinking.
+### soft problems, hard solutions
+The issues with devices are not in their capabilities, but in the realisation of a technology that could be designed to enable and enhance the very best parts of childhood, subduing or challenging those difficult components that we wrestle with today. It is trivial to limit devices at the hardware level such that applications like snapchat and instagram are not usable without meaningful evasion and alteration from the user. Even then, a suitable logging mechanism can ensure accountability for such efforts. These apps and the men who make them have sat at our children's table without asking, and they should be told to leave - quite as they would in the physical world. When we discuss 'analogue' parenting with our communities, we arrive at a consensus and make changes to our physical world to protect and empower our kids, and the same can be true for the digital world. 
+
+We ought to produce a mandate for the sanctity of childhood, and not let a commercial market for consumer electronics be metabolised as an unchangeable facet of the modern world that children must at some point be fed in to. It is quite possible to produce child-friendly electronics, and the project of doing so does not need to be one where snapchat gets to sit at the table. 
