@@ -251,6 +251,22 @@ main {
   color: var(--color-ink-muted);
 }
 
+.site-hero p a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(43, 92, 56, 0.4);
+  transition: text-decoration-color 0.15s ease;
+}
+
+.site-hero p a:visited {
+  color: var(--color-ink-muted);
+}
+
+.site-hero p a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
 /* Hero with photo — side-by-side layout */
 .site-hero--with-photo {
   display: grid;
