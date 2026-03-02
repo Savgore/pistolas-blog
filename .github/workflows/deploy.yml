@@ -32,5 +32,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: new.pistolas.co.uk
+          cname: pistolas.co.uk
           force_orphan: true
