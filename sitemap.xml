@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://pistolas.co.uk/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://pistolas.co.uk/blog/</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://pistolas.co.uk/tags/</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://pistolas.co.uk/about/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/ai/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/futurism/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/making/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/privacy/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/security/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tag/systems/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>https://pistolas.co.uk/estatem8/</loc>
+    <lastmod>2026-03-01T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/neo-robot/</loc>
+    <lastmod>2025-11-02T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/agency-claims-in-closed-systems/</loc>
+    <lastmod>2025-09-29T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/apple-ad/</loc>
+    <lastmod>2025-03-04T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/mushroom/</loc>
+    <lastmod>2025-03-04T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/how-to-know/</loc>
+    <lastmod>2024-11-04T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/smartphones-and-children/</loc>
+    <lastmod>2024-09-25T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/iso27001zip/</loc>
+    <lastmod>2024-05-28T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/a-lapsus-in-judgement/</loc>
+    <lastmod>2024-01-31T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/get-started-policy/</loc>
+    <lastmod>2023-08-31T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/forest/</loc>
+    <lastmod>2023-08-09T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://pistolas.co.uk/tetraburst/</loc>
+    <lastmod>2023-07-28T00:00:00.000Z</lastmod>
+    <priority>0.7</priority>
+    <changefreq>never</changefreq>
+  </url>
+  
+</urlset>

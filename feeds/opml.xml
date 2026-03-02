@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Savva Pistolas — all feeds</title>
+    <dateCreated>2026-03-02T11:31:32Z</dateCreated>
+    <ownerName>Savva Pistolas</ownerName>
+  </head>
+  <body>
+    <outline text="All posts — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feed.xml"
+      htmlUrl="https://pistolas.co.uk/"/>
+    
+    <outline text="ai — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/ai/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/ai/"/>
+    
+    <outline text="futurism — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/futurism/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/futurism/"/>
+    
+    <outline text="making — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/making/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/making/"/>
+    
+    <outline text="privacy — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/privacy/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/privacy/"/>
+    
+    <outline text="security — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/security/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/security/"/>
+    
+    <outline text="systems — Savva Pistolas" type="rss"
+      xmlUrl="https://pistolas.co.uk/feeds/tags/systems/feed.xml"
+      htmlUrl="https://pistolas.co.uk/tag/systems/"/>
+    
+  </body>
+</opml>

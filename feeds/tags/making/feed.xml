@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>making — Savva Pistolas</title>
+  <subtitle>Writing about AI, alignment, systems thinking, cybersecurity, futurism, privacy, and more.</subtitle>
+  <link href="https://pistolas.co.uk/feeds/tags/making/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://pistolas.co.uk/tag/making/" rel="alternate" type="text/html"/>
+  <id>https://pistolas.co.uk/tag/making/</id>
+  
+  
+  <updated>2026-03-02T11:31:41Z</updated>
+  
+  <author>
+    <name>Savva Pistolas</name>
+    <email>savva@pistolas.co.uk</email>
+  </author>
+  
+  <entry>
+    <title>We got offered $10,000 to build a property management app in Hong Kong, here&#39;s why we said no.</title>
+    <link href="https://pistolas.co.uk/estatem8/" rel="alternate" type="text/html"/>
+    <id>https://pistolas.co.uk/estatem8/</id>
+    <published>2026-03-01T00:00:00Z</published>
+    <updated>2026-03-01T00:00:00Z</updated>
+    <summary>Why we turned down a $10,000 funding opportunity to build and launch an app in Hong Kong.</summary>
+    <content type="html"><![CDATA[&lt;p&gt;Working closely with my good friend and colleague Jacob we’ve built and launched a bunch of awesome projects this year. The proudest of our paired output this year has been Flatm8, which deserves it’s own post eventually. However, we have carved out some space here to reflect on the start, fast burning development, and then shuttering of, our vertical community development app EstateM8, shared here in the spirit of building in public.&lt;/p&gt;
+&lt;p&gt;In response to a call for entrants via the University of Warwick for a competition in Hong Kong, we ideated something that follows the ethos of software design I’ve decided to commit to, and submitted it for consideration. Excitingly, we won! We were offered a week long trip to Hong Kong to experience the business ecosystem and pitch our ideas to investors. We were also granted a 10,000 USD ideation grant to develop MVP and further explore launch in HK - all with no equity asks from the funders - a pure blue sky grant! After careful consideration, we decided to turn down the offer and focus on our existing projects. A few years ago this would have been a decision I’d have let change the direction of my life, but now I feel ready to say no to such an opportunity. The dollar sum attached to this decision demands reflection!&lt;/p&gt;
+&lt;h2&gt;The Idea&lt;/h2&gt;
+&lt;p&gt;EstateM8 was billed as ‘A platform that brings together building management and residents, transforming high-rise apartments into genuine communities’. It aimed to simultaneously provide low friction management tooling for high rise building managers as well as a suite of community development tools to de-alienate and socially connect residents by providing ‘official’ resident services like pet walking, parcel collection, grocery-carrying-up-stairs-pairing, and other simple things. We had appetite for letting people who lived in the same high rise bargain collectively for buying staples like rice at bulk discounts, or organise lending libraries to share luxury goods that got little use.&lt;/p&gt;
+&lt;p&gt;The big heart of the idea was that we could tackle the loneliness and isolation epidemic in HK by producing a vehicle for connection as a second-stream of a platform that could be parcelled up to enhance the experience of high rises who used it; management won based on a refined digitalised approach to building management, and residents won by being programmatically introduced to each other in high-impact, high-trust ways that would have social compounding effects. The full value prop is still on &lt;a href=&quot;https://estatem8.com/&quot;&gt;the website&lt;/a&gt; now, and we’ll likely leave it up until the domain expires next year.&lt;/p&gt;
+&lt;h2&gt;The competition and it’s outcome&lt;/h2&gt;
+&lt;p&gt;Being completely honest, we only began to ideate in response to the competition, with no real aspirations to such an app before this. We were asked to produce something that would fit the HK market. Jacob plays neighbour to a lot of Hong Kongers, and my brother-in-law lives in HK too, so we felt at least acquainted with the culture. We built the idea into a site and shot off a 5 minute pitch video to the judges. We were emailed a few months later with an invitation to HK for a week, and an application form for the ideation grant.&lt;/p&gt;
+&lt;p&gt;We came home with an offer of 10,000 USD for ideation over the next year, where we’d meet industry experts and HK-specialised teams for incubation. It truly was an excellent offer from a very welcoming and energised team.&lt;/p&gt;
+&lt;h2&gt;So why did we say no?&lt;/h2&gt;
+&lt;p&gt;After the trip to Hong Kong, we realised that only the prop-tech half of the app was getting interest. The real estate management market definitely did seem to be available to lean platforms that will help cut management costs, but the novelty of a dual-focus platform that also provides social connection opportunities for residents was hard to digest for the investors we spoke to. At best it was a marketing gimmick, and at worst it was a liability.&lt;/p&gt;
+&lt;p&gt;Great - so let’s gut the community building and build a prop-tech platform right? Half the features for the same funding… We decided against that too. EstateM8 is parented by &lt;a href=&quot;https://turtledove.dev/&quot;&gt;Turtledove.dev&lt;/a&gt;, which is mine and Jacob’s digital agency. We founded turtledove as a vehicle for pro-social software and digital solutions that served to effect change; primarily by producing platforms that serve as ‘digital twins of an alternative present’. It’s a hobby project that spends most of it’s time pre-populating grant applications for social groups we want to uplift with funding - ourselves placed as the enablement partners. We want to build platforms and products that empower and inform as a byproduct of convenience in the day-to-day. Lopping off the community features to make a palatable prop-tech platform wouldn’t meet this spec at all. Turtledove has emerged from our belief in the social function of technology, so it tumbled into a feeling of mis-alignment with our overarching goals for these projects.&lt;/p&gt;
+&lt;p&gt;Lastly - and honestly most importantly, we are busy doing good work already! I run a cybersecurity consultancy, Jacob is a full time consultant and developer, and we both work on side projects we’re enjoying greatly; A new project would be a huge time cost to us, so it had to line up with our ethos perfectly to be squeezed in around the rest of our lives. When we couldn’t find that alignment we (admittedly feeling quite confused) decided to shelve EstateM8.&lt;/p&gt;
+&lt;h2&gt;Lessons learned&lt;/h2&gt;
+&lt;p&gt;All-in-all it was an affirming experience. Even a few years ago I was so hungry for opportunity that I would have contorted myself and my life to accommodate a chance like this. Now I do work every day that I feel proud of, and so this experience helped me (&lt;em&gt;and maybe Jake, who will agree or disagree when he reads this&lt;/em&gt;) identify how much respect I have finally been able to place on my own time. That has been a very valuable lesson indeed.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;P.S. - Shelve not archive! Drop me a line if anyone wants to pick this up, or open source the MVP we built — it’s essentially NextDoor but for people in the same building with scaffolding to err towards meet-ups, swaps, and services. It works and it looks good.&lt;/p&gt;
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>The Launch of ISO27001.zip</title>
+    <link href="https://pistolas.co.uk/iso27001zip/" rel="alternate" type="text/html"/>
+    <id>https://pistolas.co.uk/iso27001zip/</id>
+    <published>2024-05-28T00:00:00Z</published>
+    <updated>2024-05-28T00:00:00Z</updated>
+    <summary>Sav reflects on the launch of his new project, ISO 27001.zip</summary>
+    <content type="html"><![CDATA[&lt;p&gt;On Thursday I launched my new project website &lt;a href=&quot;https://iso27001.zip/&quot;&gt;iso27001.zip&lt;/a&gt;, a website containing a collection of notes on the International Organisation for Standardisations’ management systems standard on Information Security Management Systems (ISMS) - ISO/IEC 27001:2022.&lt;/p&gt;
+&lt;p&gt;It’s a non-commercial venture that’s aiming to make documentation and exploratory content about ISO 27001 more accessible and engaging for both veteran users and newcomers alike, in the hopes that more people will engage with this standard as the cybernetic masterpiece that it is. In this brief reflection, I chat over my experiences with this standard, and how they led me to want to build the site…&lt;/p&gt;
+&lt;p&gt;If this subject matter is new to you - &lt;a href=&quot;https://iso27001.zip/The+Obsidian+ISMS/Explainers+and+Housekeeping/ISO+27001&quot;&gt;check this out&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;😀 &lt;strong&gt;TL;DR&lt;/strong&gt; - &lt;em&gt;I love this thing, I’m hoping to build something that makes more people love this thing.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;First eyes on ISO&lt;/h2&gt;
+&lt;p&gt;The standard is not unique amongst it’s neighbours in the management systems standard world, following the same harmonised structure that most others do; it is instead my specific experiences that drew me to the standard and eventually developed my desire to write about it. My first exposure to the standard was many years ago in University, when my Applied Cyber Security BSc introduced it to us in our governance and risk management module. I was originally baffled by it, but soon became enamoured by the battle-tested tapestry of mutual dependencies that made up this document. Clearly, some thinking had gone into this! I enjoyed it primarily as an exercise of theory and was taught that the standard was an ideal match for larger organisations that could provide discretionary funding and make dedicated recruitment and staffing decisions.&lt;/p&gt;
+&lt;p&gt;My output at University challenged this assertion that the standard only had usability in the world of big enterprise - I had found that the Information Assurance for SME Consortium (IASME) had mapped the standard roughly across to some of the efforts it was taking to make accessible cyber security frameworks in the SME space. Further, I myself had used the standard to successfully conduct a gap analysis on both a real SME and a business component of the University - successful enough that both could make impactful changes to their body of policy based on my feedback. It was the first time I had been able to practically translate some best practice guidance to meaningful, context-informed advice, and to do so in an explanatory and justified way. It was very rewarding.&lt;/p&gt;
+&lt;p&gt;ISO had clearly made efforts to try and make sure that the standard was vendor agnostic, and some very friendly, knowledgable people in industry had informed me that it was more than possible to use 27001 for improvement within SME, and so It was clear to me at this stage in my pre-career that the inaccessibility wasn’t in the design of the body of the standard but in the accessibility to the means by which its learning could be applied. I had been able to act as the interpreter of the best practice guidance, and provide meaningful guidance with unquestionable provenance, but clearly I had added value - It wasn’t simply transliteration from standard to direction.&lt;/p&gt;
+&lt;p&gt;I had received some fantastic education on the context of the standard itself, where and how it has been useful, and what a practical application of it actually looks like. This was my induction.  From here it was an easy move to start to develop the information security risk management version of ‘common sense’. This part of my experience wasn’t a component of the standard itself; it wasn’t required reading. It came as my network and experience grew (let me say here that it is certainly still developing! I continue to be humbled by the fantastic experiences I encounter), and I believe the development of this ‘common sense’ is also the development of a blind spot if we do not pay careful attention to it. To those who don’t have ready access to the language or understanding that comes with these interactions and experiences, the standard can feel like a very alien thing to ‘work’.&lt;/p&gt;
+&lt;h2&gt;The problem&lt;/h2&gt;
+&lt;p&gt;The seemingly ethereal nature of the standard that exists when you don’t have a practical base to build it on (or someone to point at it and explain it) resonates with a lot of friends’ understanding of ISO management system standards (MSS) such as 27001. They are instruction manuals that aren’t attached to anything - an ever undecipherable IKEA step-by-step for something that doesn’t tangibly exist. I understood this position: building systems of work involve trying to capture and document interpersonal relationships and expectations (or as the management theorists who don’t do hugs would like to call them: Psychological Contracts). If your organisation isn’t one of coercive control and you find value in working with people who share your strategic objectives (vital in the not-for-profit space) then it’s necessary to find meaningful ways to share goals and objectives at the institutional level and derive our operation from this common understanding.&lt;/p&gt;
+&lt;p&gt;If that first olive branch of teaching and understanding isn’t extended to help you explore the standard in practical terms and then work back towards the theory with a well-developed common sense, then you’re unlikely to see the potential of the standard and relegate it to the whopping great pile of boring insurance-satiating box ticking exercises that cause arguments in all-hands meetings.&lt;/p&gt;
+&lt;h2&gt;Heading to work&lt;/h2&gt;
+&lt;p&gt;What little doubts I had of the practicality of the standard were dashed as soon as I hit industry - we successfully and frequently used ISO 27001 and its sibling for business continuity management systems: ISO 22301:2019, to assess whether the body of policy for smaller organisations actually met up with the processes and procedures that informed their normal operations.&lt;/p&gt;
+&lt;p&gt;Time and again we would be met with policy that was utterly disconnected from the purpose it was supposed to serve and had no clear connection between expectations/responsibilities placed on workers at all levels, and the strategic objective of the organisation. I derived immense satisfaction and engagement from identifying clunky or broken policy, stripping back the corporate jargon, comparing with the relevant clausal requirements - adjusting for context, and then preparing considerations for our client to take home with them. We had 100 percent positive feedback, and without fail we provided value. The system worked.&lt;/p&gt;
+&lt;h2&gt;Badged up&lt;/h2&gt;
+&lt;p&gt;Under the watchful guidance of my seniors at the time, I picked through dozens of these case studies, it became clear to me that I wanted to formally concretise the knowledge base. I was supported to become an ISO 27001 Lead Implementer - attending a week long training course followed by an examination which I passed. It was a very hands-on course, and I was attending alongside people who weren’t here to learn for the sake of learning (as I must admit I was), I was joined by people who needed practical understanding of the standard to take home. We had workers from internet service providers, freelance consultants, taciturn defence contractors, and middle management six-sigma black belts.&lt;/p&gt;
+&lt;p&gt;Putting aside the awesome industry stories we got to hear from all in attendance, and the outstanding trainer we had, I was left hoping for more of a nuts-and-bolts approach to decompose the standard and understand it from a theoretical perspective.&lt;/p&gt;
+&lt;p&gt;This was the inception of the idea of the website - if hands-on expertise in application and implementation (which comes in many shapes and sizes) is a requirement to understanding the standard, then those who are not directed to use the standard or have access to a colleague who can successfully inspire, are unlikely to naturally stumble into it and find it of interest. I had experienced a unique blend of academic exploration followed by attentive outcome-focused industry application, all under the watchful eyes of some very impressive people who had been doing the work since before I was born - and were applying this expertise in the not-for-profit space. An avid notetaker, I decided to keep track of my efforts and try to write accessibly and without stripping away when I was excited about a certain area, hoping that I would have enough of a body of interest in the subject to produce something at some point.&lt;/p&gt;
+&lt;h2&gt;And so…&lt;/h2&gt;
+&lt;p&gt;I then proceeded to completely forget about the idea. I slowly accrued notes and made supportive diagrams in my own time that consolidated my understanding and satisfied my interest in the standard, wrote a few blog posts, and a service methodology for our ISO informed gap analyses at work. There was no meaningful catalyst that pushed me to structure and publish the site, it was the spring-cleaning of my Obsidian vault where I stumbled across the initial idea in a note and took stock of what I had to share. I had enough to launch it as a public facing work-in-progress!&lt;/p&gt;
+&lt;p&gt;And here we are. I’m only currently sharing about 30% of the total content and notes I hold on the 27001 standard (and a lot of this bleeds into other areas). This is because a lot of what I have is only really useful to me because it jogs my memory - it isn’t useful standalone. My list of content to add to the site is long, and I am looking forward to watching it organically grow in the coming months and years. I love being busy when it’s with work I care about, and the most enjoyable part of launching a project is that it isn’t the end, it is the beginning!&lt;/p&gt;
+&lt;p&gt;If you’ve gotten this far, and you enjoy the site - why not contribute? Make the standard more accessible and get a writing credit by sending me the body of your contribution!&lt;/p&gt;
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>Considerations when getting started with InfoSec policy.</title>
+    <link href="https://pistolas.co.uk/get-started-policy/" rel="alternate" type="text/html"/>
+    <id>https://pistolas.co.uk/get-started-policy/</id>
+    <published>2023-08-31T00:00:00Z</published>
+    <updated>2023-08-31T00:00:00Z</updated>
+    <summary>A potentially dated collection of thoughts on starting out with infosec policy.</summary>
+    <content type="html"><![CDATA[&lt;p&gt;Policy work is one of the most reliably ‘second-hat’ pieces of work that I’ve come across in industry for smaller organisations. I’ve spent countless hours with people who have very little interest in policy who have clearly been saddled with the job of getting org policies sorted out. I’ve seen the populated templates that they work very hard to get across the line and signed off by the board, and I know the line of questioning that can very quickly unearth whether a policy is anything other than &lt;a href=&quot;https://en.wikipedia.org/wiki/Shelfware&quot;&gt;‘shelf-ware’&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This speaks to a few conversations; where should policy sit in the emergent or organic growth of smaller, modern businesses? How have we developed a common sense relationship to policy that limits our understanding to be purely about the ticking of legal boxes? Is there any way to develop meaningful, useful policy that doesn’t get you absolutely lost in SEO-engineered advertorials along the way?&lt;/p&gt;
+&lt;p&gt;I want to cover some of this here, and provide a meaningful conversation that I truly believe will enhance whatever policy drive your org is on right now. Thinking about these things for the sake of thinking about them certainly guarantees a superior design, and hopefully might even change the relationship you have with the process.&lt;/p&gt;
+&lt;p&gt;Policy work can feel like nothing less than the articulation of the complex social and procedural relationships between members of the org, but this requires a renewed focus on policy as a &lt;strong&gt;social toolkit&lt;/strong&gt;, not a punitive or legally mitigating collection of rules.&lt;/p&gt;
+&lt;h3&gt;Who is this for?&lt;/h3&gt;
+&lt;p&gt;Anybody who has taken on (or been handed) the responsibility to sit down and assess, rework, develop, or otherwise work with the body of policy of their organisation.  &lt;i&gt; Business Continuity, Information Security, Acceptable Use, BYOD &lt;/i&gt; are in-exhaustive examples of what may be on your plate at the minute.&lt;/p&gt;
+&lt;h3&gt;Why am I positioned to contribute to this?&lt;/h3&gt;
+&lt;p&gt;I have run &lt;a href=&quot;https://en.wikipedia.org/wiki/Gap_analysis&quot;&gt;Gap Analysis&lt;/a&gt; projects for many organisations across many disciplines. I review bodies of Information Security and Business Continuity Policy in accordance with internationally recognised standards ISO 27001 and ISO 22301 - providing considerations for orgs to take to their future discussions to enhance their policy. I’m also an accredited ISO 27001:2022 Lead Implementer under the British Standards Institute.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am not sitting down here to tell you how to run your business or what requirements you categorically need - &lt;em&gt;Context is the precursor to knowledge&lt;/em&gt; and I don’t know yours. I am collecting my (ongoing and developing) personal experience of this side of InfoSec and sharing it in the belief that it will be useful to someone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;What is to be covered?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What policy is, and what policy isn’t&lt;/li&gt;
+&lt;li&gt;How to get started on your policy&lt;/li&gt;
+&lt;li&gt;Signposting resources for your consideration (UK)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📑 What is policy?&lt;/h2&gt;
+&lt;p&gt;I’ve written using the term ‘policy’ as a broad classification of the work that may be coming as part of (in-exhaustive):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementing Information Security policies/ Cyber Security Policies&lt;/li&gt;
+&lt;li&gt;Documenting or building out your Business Continuity Policy or plan&lt;/li&gt;
+&lt;li&gt;Building an ISMS, or a BCMS&lt;/li&gt;
+&lt;li&gt;A drive to put knowledge into organisational ownership that currently sits in people’s heads, or in the ‘common sense’ of the org.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking at the commonalities between these examples (or indeed your unmentioned but incredibly relevant example) is useful in helping us define what ‘policy work’ should look like.&lt;/p&gt;
+&lt;p&gt;At its most simple, Policy refers to a system of guidelines that are used to achieve desired outcomes. People build these systems when they work in collaboration with other people so that they can be consistent over time and meet shared objectives. If people work collaboratively for a shared output of some kind, it’s important that they agree on a process. Processes are the efforts we take to meet objectives or goals. We determine what processes are by using ‘inputs’. Inputs can be things such as conversations, shared objectives, or requirements.&lt;/p&gt;
+&lt;p&gt;Examples of inputs could be the marking scheme for a group project, or the mission statement of a charity. We need these to figure out what we want to achieve (Outputs), and how we want to achieve it (Processes).&lt;/p&gt;
+&lt;p&gt;When we follow through with our efforts and create something based on our shared goals, we have produced an output. We can then assess whether our output is useful by comparing it against our intentions when we determined our inputs.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/mWYZ8UH.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;While this process can be done in a conversation for a group project of three people, it gets harder to ensure that processes are agreed upon if you bring more people to the conversation. When a project between two people turns into a collaboration between ten, it starts to become easier for different people to have diverse opinions and priorities on our inputs, our processes, and what our objectives are.&lt;/p&gt;
+&lt;p&gt;Policy helps us to collaborate at larger scales by documenting what our objectives are, what inputs inform those objectives, and what processes need to be followed to make sure those outcomes happen.&lt;/p&gt;
+&lt;p&gt;Our body of policy needs to accurately map the relationships between people, and provide an accurate signpost to the resources that mark out  subsequent roles and responsibilities. These must be justified in a way that can be walked all the way back to the strategic objectives of the organisation, which themselves can be justified as considered and informed.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🗺️ TL;DR - Policy cannot be used simply to mitigate risk or answer to regulators. Policy should be used to map the relationships between people, and the subsequent agreed (and existing) processes that create and describe how business objectives are used to make decisions on risk and controls in your business. Policy is a map to processes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;👁️ ➡️ 🧠 Make the descriptive explanatory.&lt;/h2&gt;
+&lt;p&gt;Further to the previous point - if you are developing a management system of any kind and intend to map or articulate that system through a body of policy, it is vital that the system is explanatory, and not just descriptive.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt; is the account of traits or features of a given object that can be used to identify it. &lt;strong&gt;Explanation&lt;/strong&gt; is the ability to decompose and identify the mechanisms by which the describable actually comes to be and operate.&lt;/p&gt;
+&lt;p&gt;It is not enough to create controls that are only descriptive, it is important to show the provenance of any responsibilities or controls and draw a silver thread back to the underlying mechanisms and processes that justify and explain this final output. This can be seen as an explanatory relationship.&lt;/p&gt;
+&lt;h2&gt;🐦 The Stress Canary&lt;/h2&gt;
+&lt;p&gt;Policy work should not by its nature cause stress. The concerted effort to capture and document the relationships between different operations and staff is a project that will make life easier. Each stage should bring relief and clarity to your mind about the state of the business, and the opportunities for further development. But the scale - or the information, that you uncover about the readiness of your organisation -  alongside improper resourcing or support, can leave you feeling like you’re clutching at straws or doomed to fail.&lt;/p&gt;
+&lt;p&gt;Stress should be seen as a &lt;a href=&quot;https://en.wikipedia.org/wiki/Domestic_canary#Miner&#39;s_canary&quot;&gt;Miner’s Canary&lt;/a&gt; for the methodology of your project. Ensuring you are following a process that has been informed and approved by top management means you cannot feel lost, and should not feel stressful. If you do catch yourself feeling stressed, you need to remember that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You are not taking on ownership of the risks you are identifying, and they exist with or without your knowledge of them.&lt;/li&gt;
+&lt;li&gt;Policy work can only arise to document what organisational objectives and goals have been determined, it is not your job to create as you document. These are separate work streams (More on this later).&lt;/li&gt;
+&lt;li&gt;If you are a risk owner also completing the policy drive (likely a micro or small business owner), then make sure you’re separating the creation of new processes/goals from the documentation of them in policy. &lt;strong&gt;That degree of separation will stop you going mad.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🍰 Working guidance for development of policy - The short version&lt;/h2&gt;
+&lt;p&gt;The main takeaway from what has been said so far is that policy must serve to articulate existing decisions and processes, not create them from nothing. In practice, it is almost universally applicable advice that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Any body of policy that creates obligations should be based on a risk assessment and impact analysis.&lt;/li&gt;
+&lt;li&gt;Risk assessments and impact analysis should consider the strategic goals and objectives of an organisation.&lt;/li&gt;
+&lt;li&gt;Strategic goals and objectives are set by top management.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can take this waterfall of responsibility to the bank and stop reading now if you like. The reason policy is so vital to any management system is because it serves to articulate an explanatory relationship between these key features. &lt;strong&gt;Policy is the output of a management system, not an input&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Consequently, some of the best policies I have ever reviewed have been 1-2 pages long, and some of the worst I have ever seen have been long, arduous, and control-centric.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A note on inputs and outputs in the context of continual improvement:&lt;/strong&gt;
+Cycles of iterative and continuous improvement eventually do mean that policies become an input for a process seeking to refine and enhance the management system of your choice, but it’s not always useful to begin with this mentality, and it may in fact hinder the important appreciation of policies being the documentation of processes that exist, instead of the conjuring of new processes as they are written.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;Some Reflections on good practice for policy projects&lt;/h1&gt;
+&lt;h2&gt;👍 Identify the work-object and get buy-in&lt;/h2&gt;
+&lt;p&gt;The first step on any high-level/organisational project should be to secure buy-in from top management. This is the acknowledgement and resourcing to commence your project. Traditionally we’re thinking about the board or the C-levels here - but realistically it’s likely to be the person who pays for things to happen, and goes to prison if they violate the companies act. As we are looking to create a body of policy that derives from strategic objectives we need to get authorisation for those responsible for setting them. If a project such as this doesn’t have meaningful and well-resourced buy in then it’s a non-starter.&lt;/p&gt;
+&lt;p&gt;What does buy-in need to be for? It cannot simply be for the development of our policies in house, as policies develop as a by-product of meaningful decisions that lead to new processes or management systems.&lt;/p&gt;
+&lt;p&gt;So the real work that is being proposed is for the development of:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Mechanisms to identify what processes are necessary for our ISMS&lt;/li&gt;
+&lt;li&gt;Commitment to the refinement of the processes we already have in place&lt;/li&gt;
+&lt;li&gt;Resourcing and support for the new processes or procedures that are required&lt;/li&gt;
+&lt;li&gt;Effective documentation of this work in a body of policy.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let’s now discuss setting information security objectives. We derive IS objectives from common information security goals that are considered to protect or develop the overall strategic objectives of the organisation. These let us focus on how we technically assure information security using policy, processes and procedures. We also use them as a unit of measurement in the establishment of our risk appetite - as we can ask whether certain actions support or damage our information security objectives.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ej1icUx.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Another way I have tried to visualise this is seen below, where we place our Information Security Objectives within our strategic objectives. The respective objectives are our measures of whether we have enacted our day-to-day processes (such as the mentioned ad campaign or awareness program) in accordance with our overarching objective.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Either way, the essential concept being communicated is that we have specific goals we set using our IS Objectives, which themselves are set as supporting concepts for meeting our overarching strategic objectives.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/8EtNtaP.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🧱 Design Information Security Objectives based on the CIA Triad. These are your ‘raw materials’&lt;/h2&gt;
+&lt;p&gt;Information Security objectives are very easy to set and tend to be similar for different organisations. They get more specific or convoluted mainly when we need to take on certain levels of risk that change how we protect information. For the most part, we create Information Security Objectives as a means to focus on how we technically assure the information security of an organisation to better support the overall strategic objectives&lt;/p&gt;
+&lt;p&gt;you can safely use the following guidance:&lt;/p&gt;
+&lt;p&gt;Information Security objectives can almost always derive from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_security#Key_concepts&quot;&gt;CIA Triad&lt;/a&gt; - Which is the confidentiality, integrity, and availability of data. When we set out these objectives we create the mechanism by which we justify new roles, responsibilities, and processes. These IS objectives can be as simple as:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;The organisation appreciates that the maintenance of Confidentiality, Integrity, and availability as pertaining to information and information systems is integral to the support of the strategic objectives of the organisation. we therefore create the following Information Security Objectives:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To implement, maintain, and continually improve our information security to better protect the confidentiality of our information, including but not limited to sensitive information.&lt;/li&gt;
+&lt;li&gt;To implement, maintain, and continually improve our information security and design to ensure that the integrity of our information and information systems remains unquestionable.&lt;/li&gt;
+&lt;li&gt;To implement, maintain, and continually improve our information security and design to ensure that the data that we rely on - and the people that rely on us, are able to access the data they need in a timely and reliable manner.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;With these three core aspects of the CIA triad folded into the objectives of the organisation, you have created the means by which controls and responsibilities can be explained and justified. These are the raw materials from which we can build more precise or granular controls and processes.&lt;/p&gt;
+&lt;h2&gt;✅ Figure out what you care about - Start with a risk assessment&lt;/h2&gt;
+&lt;p&gt;When we tell users to use MFA or a password manager, or what is expected of them when taking care of a company owned laptop, we are supposed to be making an informed decision in response to a risk.&lt;/p&gt;
+&lt;p&gt;We should theoretically only be able to take these precautionary actions after qualifying the actual risk we are treating. In the ‘real world’ we don’t need to fully qualify the likelihood or impact of risk when we decide not to throw ourselves from great heights or ingest unknown berries, so it can slip our mind to qualify risk when we are building systems of work.&lt;/p&gt;
+&lt;p&gt;Building management systems are very different to the rough and ready risk calculations we conduct when regarding our own physical safety - we are creating a system by which we must justify the obligations we place on other members of our organisation, and a system whereby these obligations support loftier and further reaching strategic objectives. We therefore need a mechanism to assess risks before treating them. This is what a risk assessment is.&lt;/p&gt;
+&lt;p&gt;A risk assessment consists of identifying what may interrupt the successful ongoing enactment of strategic objectives, and then weighing up the likelihood that this incident may occur, against the impact that this incident would have if it did occur. Once we identify and qualify the major and minor risks facing the business, we are able to make an informed decision about what we can do to treat these risks and protect our strategic objectives.&lt;/p&gt;
+&lt;p&gt;Conversely, if we try to build out a set of controls or requirements without a risk assessment, we do not have any underlying structure to justify or measure the success of the control. This is not a suggestion to create measurement and performance tracking where there is no need to, only to create a relationship with risk whereby we need to be able to articulate it fully in order to say with certainty that we have treated or addressed it.&lt;/p&gt;
+&lt;h2&gt;🗺️ Figure out who cares about you - Look at your context&lt;/h2&gt;
+&lt;p&gt;Management Systems place a lot of focus on ‘understanding the organisation and its context’. This refers to the need to be able to place your organisation within the landscape that it acts and behaves in. The interconnected nature of different economic and social forces is one of the requirements for an organisation to even be possible to run and exist; It makes sense that we can’t abandon the consideration of these factors when it comes to securing and protecting our organisation.&lt;/p&gt;
+&lt;p&gt;The two points of interest for considering context are to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Understand your ‘context’ using a focus on internal and external issues that may affect your information security management system&lt;/li&gt;
+&lt;li&gt;Understand the needs and expectations of people or organisations that you are connected with&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll attach a table with some examples of internal and external factors for consideration, but the best rule of thumb is to find and categorise issues, individuals, and institutions into either internal or external factors, and run a thought exercise where you identify how these things may impact your strategic objectives.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Internal Issue&lt;/th&gt;
+&lt;th&gt;External Issue&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Organisational Structure of your business&lt;/td&gt;
+&lt;td&gt;Political landscape of the country you are in&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Systems&lt;/td&gt;
+&lt;td&gt;Legal obligations and responsibilities&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Staff awareness and understanding of your objectives&lt;/td&gt;
+&lt;td&gt;Relationships with external stake holders or members of your supply chain&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Culture of your organisation&lt;/td&gt;
+&lt;td&gt;Contractual relationships&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A note on the scope of consideration: It’s not just legal/good faith actors you should consider as a part of your context. Criminals or those who would see harm to your organisation should also be considered in this process. Any ‘Issue, Individual, or Institution’ really does mean anyone and everyone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;🏠 Build the house before you live in it (Even if you live in it already)&lt;/h2&gt;
+&lt;p&gt;Any structured management system/body of policy project should have clear demarcation between the planning and operating phases. Planning is the process by which we determine and begin measuring objectives, whilst ascertaining what risks we are identifying and what our approach to treating them are. Operation is actualising our plans, and can only ever be done &lt;strong&gt;properly&lt;/strong&gt; if we are working to a good and thorough plan.&lt;/p&gt;
+&lt;p&gt;This may seem like common sense - but I feel I must make this point as I have seen a very common approach whereby the project owner (who is unfortunately likely doing the work because they have been told to, not because they want to) will put together a set of boxes to tick and processes to change or conjure into being, and work from the operation of the organisation backwards, and create documentation of processes as a byproduct of the unjustified sets of controls they just ‘feel’ should be in place.&lt;/p&gt;
+&lt;p&gt;I can’t emphasise enough the ongoing help that a thorough planning phase will provide.&lt;/p&gt;
+&lt;h2&gt;💭 Closing thoughts&lt;/h2&gt;
+&lt;p&gt;I hope you’ve enjoyed this collection of thoughts on policy and management systems, and I hope someone finds it useful. It is of course in-exhaustive and there is plenty more to talk about - Which I hope to do. This feels like a good portion for thought however, so I will leave it here for the moment.&lt;/p&gt;
+&lt;p&gt;The main takeaway I hope to provide is that it’s worth digging into thinking about this stuff from an architectural point of view, and giving yourself as much breathing room as you possibly can to discuss and design the process for your policy work. If you have ended up using this piece of writing as a contributing factor in your project and you’d like to chat further about it’s application in your specific business context then let me know (&lt;a href=&quot;mailto:savva@pistolas.co.uk&quot;&gt;savva@pistolas.co.uk&lt;/a&gt;). You can also subscribe to my blog via &lt;a href=&quot;https://pistolas.co.uk/subscribe/&quot;&gt;email&lt;/a&gt; or &lt;a href=&quot;https://pistolas.co.uk/feed/&quot;&gt;RSS feed&lt;/a&gt;.&lt;/p&gt;
+]]></content>
+  </entry>
+  
+</feed>
