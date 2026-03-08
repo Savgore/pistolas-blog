@@ -1,0 +1,44 @@
+---
+title: "AI as a detector of work that needn't be"
+date: 2026-03-08
+description: "Can AI serve as our quiet advocate for rooting out poorly designed systems that sideline human experience in favour of performative artefacts that allude to productivity?"
+tags:
+  - post
+  - ai
+  - systems
+  - futurism
+permalink: /work-that-need-not-be/
+og_image: /assets/og-default.png
+---
+
+Artificial Intelligence is the provision of an omni-capable tool that can be deployed seemingly anywhere in your life to produce instant, accurate, competent satisfaction of any requirement. Whether it's anxiety quelling email drafts to reply to a complex 'multi-stakeholder' situation at work, or full-scale automation of your entire University degree - from labs, to reporting to reflection. AI fulfils requirement without fatigue, and without need for much affective input on your part. You can produce artefacts that fit the shape of 'output' for near-any system in work or study. Often this is labelled a productivity enhancer - enabling us to spin additional plates and optimise to the moon and back. As with the fundamental dialectical tradition where 'progress' and creation is inextricably linked with decay and destruction, let us reflect on what the contrary of our new era of AI productivity might be.
+
+> In our days, everything seems pregnant with its contrary: Machinery, gifted with the wonderful power of shortening and fructifying human labour, we behold starving and overworking it; The newfangled sources of wealth, by some strange weird spell, are turned into sources of want; The victories of art seem bought by the loss of character.
+
+Large language models accomplish any task that can be 'reduced' to pattern discovery and subsequent exploration, so they absolutely smash coding, maths, chess, DNA, law, etc. Generally speaking, our species does well to produce machines that automate procedures, and AI is the most sophisticated iteration of this goal so far. Where AI succeeds at producing an effective artefact, the observer would do well to ask whether such an artefact was ever appropriate for a human being to produce in the first place. This piece explores whether AI can serve as our quiet advocate for rooting out poorly designed systems that sideline human experience and outcomes in favour of performative artefacts that allude to 'productivity' without any meaningful impact on our world.
+
+## Academia
+
+Let us first look at academia in the UK up to at least MSc level for our assessment of pro or anti-human design; what was once an earnest commitment to development of knowledge derived from intrinsic motivation has become a hyper-marketised, cynical, and un-provenanced set of institutions that treat near-solely for profit. International students mill in and out of the country on restrictive visas, paying exorbitant fees to attend poorly planned and atomistic courses that are fulfilled by teaching assistants and professors who barely have the time to populate their material with the love and attention that good teaching needs. The focus is purely on an 'output' of degrees that can be leveraged in less economically developed nations, hung entirely on the walking-dead reputation of institutions that no longer have the capacity to separate their knowledge production from their profit production.
+
+In such institutions the discretion, discussion, and initiative that come with true learning are inconveniences to be innovated away. What is really desirable and effective is for students to perform learning, and for faculty to perform teaching. Enter AI; the perfect companion to the 'performance of academia'. 
+
+The faculty who work in good faith: the 'good hearts in sick bodies', are working hard to deal with the inundation of submissions that have been augmented or entirely produced by AI tooling. They wonder if there's any way 'back' to a world where students are authentically engaged with material. The elephant in the staff room is that AI is just the whistleblower for the underlying and devastating reality that complex academic institutions removed authentic markers for student development from their feedback loops long ago. We've just now reached a stage where tech is available to ensure everyone can present as 'up-to-speed' instead of dropping out - which used to be conveniently leveraged to produce an appearance of quality and excellence as evidenced through completion rates and diverse student outcomes. Now of course, everyone gets a 2:1.
+
+Using this particular lens, AI is not a hurdle for higher education to jump, but an *assessment* for it to improve in response to. Work that can be done without authentic, interpersonal, and embodied engagement with students is unlikely to be pro-human design in the first place! Systems that measure skill and competence without any relational or intersubjective artefacts at all are guaranteed to be atomised, alienating, and ultimately ineffective. The fact that robots can ace the courses from start to finish is the smoking gun.
+
+No such automation is available for mentor-mentee (*or master-apprentice*) arrangements, where development is sewn into a lasting relationship that is reflected in work-objects that are all at once an opportunity, an assessment, and a reward; an embodied artefact of development and refinement over time. AI screams at us that we must urgently reform higher education (*starting at assessment processes and working backwards!*) to identify relational consensus from collaborative groups, fuelled by intrinsic motivation as the desirable output of university - and that this output is the precious input for knowledge-production that makes the world a better, safer, civil place to be.
+
+## Writing hard or hardly writing?
+
+Take another example - writing. AI can easily produce a prosaic estimation of any particular subject matter, and inflate it to fit a style of your choosing. These words are the well-dressed zombies of the human corpus of text-gone-by: conjured to walk and dutifully attend to our inboxes, but without any soul! AI prose is for applications of the written word that require nothing but the utilitarian conveyance of data from box to box. 
+
+This is why it's perfectly normal to use AI to write your emails, but utterly absurd to use it to write your reflective journal. Writing for outcomes is easily replaced by the bot, but writing for reflection, insight, and knowledge-production is not. So for most folks working day-to-day, the use of AI is just the technical actualisation of the scratch at the back of our brain when we write our press releases, our marketing copy, or our emoji-laden internal weekly-wins roundup newsletter for the team. We do of course know that buy-and-large the words we write at work are not a viable contribution to any great or meaningful human project - but instead the dutiful population of the working day with a performance of productivity; Our AI tools once again attend as exhibit-A in the trial that asks whether the system we're producing these artefacts for is a humane one, or a machine that obviates human benefit for a performance of productivity. 
+
+## Ask not what you can do with AI, but what AI can stop us doing at all.
+
+Taken in aggregate, how much of our collective time do we waste on the production of artefacts that serve no purpose but to allude to the effectiveness of complex systems that don't authentically serve any great human interest? How often do we reflect on our work in school or business, and realise that we are pretending to try while other pretend to listen?
+
+When we ask what the place of this AI tooling in academia, work, and life is, we must make sure we do so circling the right systems as our scope of assessment, and with the right outcomes in mind! It ought never be a reflection about whether or not we need to be using AI for these varied applications, but whether we should be undertaking such ventures as human beings in the first place! And no, this is not an AI booster blog that suggests we're mere moments away from 'automating' these tasks and flying to the moon in our open-claw productivity spaceships... Instead, it's an earnest suggestion that AI (*among it's many fantastic uses*) can be used as an effective mechanism for assessing the prevalence of anti-human design in complex systems. 
+
+The system is what the system does. The machine that counts beans also functions to tell us we are destined for greater things than just counting beans, provided we are wise enough to see how easily beans can be counted by machines, kind enough to share the bean counter, and brave enough to decide if we want to count the beans at all.
