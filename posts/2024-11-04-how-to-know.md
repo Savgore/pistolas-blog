@@ -17,7 +17,7 @@ The term 'research' is always misused as to refer to 'the collection of informat
 
 When we say "**The** stock of human knowledge", we certainly don't mean the bits of it you or I have experiential access to, we mean holistically and totally, totting up the knowledge that anybody and everybody has access too. If somebody knows about it already, then you are not doing research to find that information, you are just retrieving that information and making it known to yourself - further to the 'research' that produced it as knowledge.
 
-![A flow chart showing the research object as a process of knowledge production, and the accessing of knowledge as information](https://i.imgur.com/OyxEqDR.png)
+![A flow chart showing the research object as a process of knowledge production, and the accessing of knowledge as information](/assets/images/OyxEqDR.png)
 
 Research is the process for a system of knowledge production, not the mechanism by which we make knowledge that exists available to ourselves. The use of the term research interchangeably with the action of information retrieval is symptomatic of a society that has a mostly individualised and individualising relationship with their information systems, where you equate what is known and knowable with what you (as an individual) know and can know. 
 
@@ -29,7 +29,7 @@ Consumer electronics such as our kitchen-listener friend Alexa invite us to hand
 
 Further still the AI 'revolution' changes the landscape for users, with AI-powered summaries now ingesting multiple sources to produce an approximate summary of results (Google's new Generative AI search results and Notebook LLM as relevant examples). What remnants there may have been of the behaviour to investigate and fully explore various sites or perspectives (Which is still not a true research method, but is designed to approximate one) is disincentivised - with your review of resources now automated, you get the information you need and a list of "sources" to the right. 'How to know' is obsolete, all praise 'What to know'.
 
-![A google result for "What is critical thinking".](https://i.imgur.com/IDUTypP.png)
+![A google result for "What is critical thinking".](/assets/images/IDUTypP.png)
 
 The true mechanism of critical engagement and integrity of due process melt away into an anxious state of being for any participant of this new way of being and knowing; where knowing is not a habit of reflection or commitment to a process, but instead the perceived ability to - at any time, dip into the resource bank and access the offered information. Equally, to not know - is now simply to not be able to check your understanding of things against the relevant tool - a phone, a smart speaker, a search engine. Behaviourally, this leaves us with access to what we want to know, but no sense of authorship over the process that produced our understanding. Our relationship to this type of knowledge is an anxious one, where we defer from our faculties for learning and understanding, and foster a faith-based relationship to information.
 

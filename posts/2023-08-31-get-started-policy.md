@@ -48,7 +48,7 @@ Examples of inputs could be the marking scheme for a group project, or the missi
 
 When we follow through with our efforts and create something based on our shared goals, we have produced an output. We can then assess whether our output is useful by comparing it against our intentions when we determined our inputs.
 
-![](https://i.imgur.com/mWYZ8UH.jpg)
+![](/assets/images/mWYZ8UH.jpg)
 
 While this process can be done in a conversation for a group project of three people, it gets harder to ensure that processes are agreed upon if you bring more people to the conversation. When a project between two people turns into a collaboration between ten, it starts to become easier for different people to have diverse opinions and priorities on our inputs, our processes, and what our objectives are.
 
@@ -104,13 +104,13 @@ So the real work that is being proposed is for the development of:
 Let's now discuss setting information security objectives. We derive IS objectives from common information security goals that are considered to protect or develop the overall strategic objectives of the organisation. These let us focus on how we technically assure information security using policy, processes and procedures. We also use them as a unit of measurement in the establishment of our risk appetite - as we can ask whether certain actions support or damage our information security objectives. 
 
 
-![](https://i.imgur.com/ej1icUx.jpg)
+![](/assets/images/ej1icUx.jpg)
 
 Another way I have tried to visualise this is seen below, where we place our Information Security Objectives within our strategic objectives. The respective objectives are our measures of whether we have enacted our day-to-day processes (such as the mentioned ad campaign or awareness program) in accordance with our overarching objective.
 
 **Either way, the essential concept being communicated is that we have specific goals we set using our IS Objectives, which themselves are set as supporting concepts for meeting our overarching strategic objectives.**
 
-![](https://i.imgur.com/8EtNtaP.png)
+![](/assets/images/8EtNtaP.png)
 
 ## 🧱 Design Information Security Objectives based on the CIA Triad. These are your 'raw materials' 
 

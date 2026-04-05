@@ -17,17 +17,17 @@ I wrote this about two years ago, and have been cleaning up my Obsidian vault in
 
 ~~I was recently delivering a security awareness training session for a client~~ *I was delivering a Security Awareness Training for a client in 2023*, and was hit with a question that took me back to about 2015; "Sometimes you see those facebook posts that declare that you don't give them permission to use your data and things like that - does that hold any water?"It blasted me back to when I would sit at my laptop as a 15 year old facebook user and see these armchair solicitors  - in very good faith, copy and paste viral statements regarding the new exploitation of your information by facebook or twitter, and attempt to opt-out of it with a legalese-ridden post. 
 
-<img src="https://i.imgur.com/dLyEQ4N.png" width="300">
+<img src="/assets/images/dLyEQ4N.png" width="300">
 
 Other examples I could remember were just simple acts of attempting to withdraw consent to data capture:
 
-<img src="https://i.imgur.com/Hgraea4.png" width="300">
+<img src="/assets/images/Hgraea4.png" width="300">
 
 My answer to this question at the training was that there is no granularity in your consent when you use digital platforms that provide social media services, and if you have signed the EULA (Which is going to have been a requirement for you to access the platform), then the platform owner and team are the only ones who have a say in the exploitation of the information you provide them.
 
 Of course there are settings that can be configured to alter or modify your privacy settings, but these almost entirely relate to how your data can be used or viewed by other third parties - the owner-operator of the platform has free reign with your data for the most part. There are currently some options to supposedly opt-out of the use of your data in training the AI models of certain platforms. When looking into this, I found that there was a new example of the legal-post phenomenon relating specifically to revoking access to your data for AI training:
 
-<img src="https://i.imgur.com/xyiKpCC.png" width="300">
+<img src="/assets/images/xyiKpCC.png" width="300">
 
 # Reflection
 
