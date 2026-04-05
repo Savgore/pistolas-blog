@@ -70,7 +70,7 @@ If we remember the Lapsus$ calling card of purchasing or engineering access usin
 
 Let's play with another theoretical - perhaps the police disabled the internet of Arion's phone and so he was left without internet in the hotel room. The Amazon Firestick is another computer left in the room with him, it's just got more controls and restrictions placed on it by Amazon. How difficult do we think it would be to remove these restrictions? This is called Jailbreaking or Rooting. It's easy.
 
-![A youtube search for 'rooting a firestick'](/assets/images/8DURc7v.jpeg)
+![A youtube search for 'rooting a firestick'](/assets/images/8DURc7v.webp)
 
 Thanks YouTube, looks like anywhere between 5 and 15 minutes if you don't know what you're doing. A Firestick is just running the mobile operating system Android, and reverting it back to this state allows us to install web browsers, and other tools. Perhaps Arion connected his phone via bluetooth to the Firestick to use it as a keyboard and mouse. 
 
