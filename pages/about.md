@@ -7,12 +7,14 @@ permalink: /about/
 
 <!-- AUTHOR: Replace this div with an img tag once you have your photo -->
 <!-- e.g. <img class="about-photo" src="/assets/savva.jpg" alt="Savva Pistolas"> -->
-<div class="about-photo about-photo--placeholder"></div>
+<img class="about-photo" src="/assets/savva.jpg" alt="Savva Pistolas">
 
-I'm Savva. I spend most of my time thinking about systems — how they're designed, what they actually do (as opposed to what they're supposed to do), and how the people inside them navigate that gap. I write here to think things through.
+Hello! I’m Savva. This is my website for writing about things that interest me. I spend time on technology, cybernetics, AI, and generally looking at systems thinking; How are they designed, what’s the gap between what they do and what they’re supposed to do, and how do people inside them navigate that gap?
 
-My background is in cybersecurity and I've spent a lot of time inside organisations helping them understand their own risk. That work draws on systems thinking more than most people expect. You can't assess an organisation's security posture without first understanding how it actually operates — and that's rarely how the org chart says it does.
+My background is in cybersecurity, and I’ve spent a lot of time inside teams of all shapes and sizes helping develop organisational relationships to risk. That work draws on systems thinking more than most people expect, you can’t secure what you don’t understand – and we can get into all sorts of interesting details on the difference between an organisation’s declared design and the actual ‘boots-on-the-ground’ reality. I now work as the Technical Director at [ADAS Ltd](https://adas-ltd.com), mostly delivering penetration testing and regulated services to some wonderful clients.
 
-One of the larger side projects I've built is [iso27001.zip](https://iso27001.zip) — an attempt to make ISO 27001 more accessible and less like reading a legal document. It's a non-commercial project that grew out of notes I'd been keeping for years. That's broadly the kind of thing I make: tools and writing that try to lower the barrier to things that are worth engaging with.
+I run [Turtledove.dev](https://turtledove.dev). We’re a small digital agency that’s home to [Flatm8.co.uk](https://flatm8.co.uk). We build good software – both in design, safety, and purpose. That’s with the wonderful Jacob Alcock. 
 
-<!-- AUTHOR: Add a third paragraph here about your other interests, current reading, or whatever else feels relevant -->
+I’m undertaking a MSc in Applied Artificial Intelligence at Warwick university aiming to pursue a PhD exploring radical degrowth ideas in computing for good. How can we build better frameworks for leveraging technology sustainably, when we know how dangerous, polarising, and unsustainable current paradigms for engagement are? I’m doing my MSc on assessing where local-first tiny/edge AI can be sustainably used for good.  
+
+Thanks for visiting my site – my email is my first name @ pistolas . co . uk – do say hello!
