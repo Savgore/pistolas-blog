@@ -5,9 +5,7 @@ description: "A little about Savva Pistolas."
 permalink: /about/
 ---
 
-<!-- AUTHOR: Replace this div with an img tag once you have your photo -->
-<!-- e.g. <img class="about-photo" src="/assets/savva.jpg" alt="Savva Pistolas"> -->
-<img class="about-photo" src="/assets/savva.jpg" alt="Savva Pistolas">
+<img class="about-photo outset" src="/assets/savva.jpg" alt="Savva Pistolas">
 
 **Hello! I’m Savva**. Welcome to my website for writing about things that interest me. I spend time on humane technology, cybernetics, AI, and generally looking at systems thinking; how are systems designed, what’s the gap between what they do and what they’re supposed to do, and how do people inside them navigate that gap?
 

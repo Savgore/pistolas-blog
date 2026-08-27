@@ -452,6 +452,17 @@ main {
   padding-top: 1.75rem;
 }
 
+.post {
+  --out-max: 24px;   /* the gutter, and no further */
+}
+
+/* no contents and no tags, so no margin column to reserve, and a figure
+   can lean the whole way into the space that column would have taken */
+.post--plain {
+  grid-template-columns: minmax(0, 66ch);
+  --out-max: 130px;
+}
+
 .post-hd {
   grid-column: 1 / -1;
   border-bottom: 3px solid var(--ink);
@@ -542,6 +553,25 @@ main {
 .prose img {
   border: 1px solid var(--ink);
   margin: 1.4rem 0;
+}
+
+/* Figures that hang out of the measure into the margin.
+   `--out` is how far the element wants to lean; `--out-max` is how much
+   room the layout actually has, so an article carrying a contents column
+   leans only into the gutter and never underneath it. */
+.outset {
+  float: right;
+  margin-right: calc(-1 * min(var(--out, 0px), var(--out-max, 0px)));
+  margin-left: 3ch;
+  clear: right;
+}
+
+.about-photo {
+  width: 160px;
+  --out: 80px;
+  margin-top: .35rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--ink);
 }
 
 .prose figure {
@@ -652,8 +682,10 @@ main {
 }
 
 @media (max-width: 900px) {
-  .post {
+  .post,
+  .post--plain {
     grid-template-columns: 1fr;
+    --out-max: 0px;
   }
 
   .aside {
@@ -1119,6 +1151,14 @@ main {
 @media (max-width: 720px) {
   body {
     font-size: 16px;
+  }
+
+  .about-photo {
+    width: 118px;
+  }
+
+  .outset {
+    margin-left: 2ch;
   }
 
   .index {

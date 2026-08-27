@@ -6,7 +6,8 @@ layout: base
 {% set body = content | addHeadingIds %}
 {% set sections = content | headings %}
 
-<article class="post">
+{% set hasMargin = sections.length or displayTagList.length %}
+<article class="post{% if not hasMargin %} post--plain{% endif %}">
   <header class="post-hd">
     <h1>{{ title }}</h1>
     {% if description %}<p class="dek">{{ description }}</p>{% endif %}
@@ -22,6 +23,7 @@ layout: base
     {{ body | safe }}
   </div>
 
+  {% if hasMargin %}
   <aside class="aside">
     {% if sections.length %}
     <p class="hd">Contents</p>
@@ -40,6 +42,7 @@ layout: base
     </ul>
     {% endif %}
   </aside>
+  {% endif %}
 
   {% if firstTag %}
   {%- set related = collections.posts | byTag(firstTag) | without(page.url) | limit(6) %}
