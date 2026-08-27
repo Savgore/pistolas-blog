@@ -1,9 +1,12 @@
 <footer class="site-footer">
-  <p>© {{ site.currentYear }} {{ site.author.name }}</p>
-  <div class="site-footer__feeds">
-    <a href="/feed.xml">RSS — All</a>
-    <a href="/tags/">RSS per topic</a>
-    <a href="/blog/">Writing</a>
-    <a href="/about/">About</a>
+  <div class="row">
+    <p>© {{ site.currentYear }} {{ site.author.name }}</p>
+    <div class="feeds">
+      <a href="/feed.xml">RSS All</a>
+      <a href="/tags/">RSS per topic</a>
+      <a href="/">Writing</a>
+      <a href="/about/">About</a>
+    </div>
   </div>
+  <p class="credits">Header: {{ paintings.header.credit }}. Not found: {{ paintings.lost.credit }}. Both public domain.</p>
 </footer>

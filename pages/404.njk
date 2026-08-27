@@ -6,12 +6,11 @@ permalink: /404.html
 eleventyExcludeFromCollections: true
 ---
 
-<div class="error-page">
-  <span class="error-page__code">404</span>
-  <h1>Page not found</h1>
+<div class="err">
+  <img src="{{ paintings.lost.src }}" alt="{{ paintings.lost.credit }}" data-credit="{{ paintings.lost.credit }}">
+  <h1>404 - Page not found</h1>
   <p>The page you were looking for doesn't exist. It may have moved, or the URL may be wrong.</p>
-  <div class="error-page__links">
-    <a href="/blog/">All writing</a>
+  <div class="links">
     <a href="/tags/">Browse topics</a>
     <a href="/">Home</a>
   </div>

@@ -1,0 +1,23 @@
+{# Painting, then the black field carrying the name and navigation. #}
+
+<figure class="plate" style="margin:0">
+  <img id="painting"
+       src="{{ paintings.header.src }}"
+       alt="{{ paintings.header.credit }}"
+       data-credit="{{ paintings.header.credit }}"
+       width="1700" height="276">
+  <canvas id="painting-canvas" aria-hidden="true"></canvas>
+</figure>
+
+<header class="mast">
+  <p class="name"><a href="/">Savva Pistolas' <i>website</i></a></p>
+  <nav class="bar" aria-label="Site navigation">
+    {%- for link in site.navLinks %}
+    <a href="{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.label }}</a>
+    {%- if not loop.last %}<span>·</span>{% endif %}
+    {%- endfor %}
+    {% if collections.posts | length %}
+    <span class="right">Updated {{ collections.posts[0].date | readableDate }}</span>
+    {% endif %}
+  </nav>
+</header>
