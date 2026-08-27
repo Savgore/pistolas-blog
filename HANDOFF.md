@@ -51,10 +51,22 @@ No `stream:` field. Tags are the only taxonomy.
 ## 4. Image Workflow
 
 **In-post images:**
-- Store in `/assets/posts/[your-slug]/image.png`
-- Reference in Markdown: `![alt text](/assets/posts/your-slug/image.png)`
+- Store in `/assets/posts/[your-slug]/image.webp`
+- Reference in Markdown: `![alt text](/assets/posts/your-slug/image.webp)`
 - The CSS applies a border automatically, don't bake borders into the image
 - Use descriptive `alt` text always
+- `loading="lazy"` is added automatically at build time
+
+**Size them to the slot.** The prose column is about 530px wide, so 1060px
+covers a 2x display exactly. If you set `width="300"` on the image, 600px is
+enough. Save as WebP at quality 82:
+
+```bash
+cwebp -q 82 -resize 1060 0 source.png -o assets/posts/your-slug/image.webp
+```
+
+Anything larger is weight nobody can see, and it is what pushed the site to
+2.7MB before it was cleaned up.
 
 **OG/social thumbnails:**
 - Default: `/assets/og-default.png` (1200×630px)
@@ -82,11 +94,33 @@ Drop the new file in `/assets/paintings/` and change the two lines.
 
 The not-found painting has neither constraint. It is a plain `<img>` at whatever shape it comes in.
 
-Use public domain work and keep the credit accurate. Wikimedia Commons is the usual source; download at 1600–2400px wide and compress to under ~150KB.
+Use public domain work and keep the credit accurate. Wikimedia Commons is the usual source; download at 1600-2400px wide and compress to under ~150KB.
 
 ---
 
-## 6. Public Repository
+## 6. Design Rules
+
+The look is locked down in `CLAUDE.md` at the repo root. That file is loaded
+automatically by Claude Code, so any agent working on this repo reads it before
+touching anything, but it is worth a read yourself before commissioning changes.
+
+The short version:
+
+- Five colours, no grey, no cream. White ground, black ink, blue links, purple
+  visited, red for marks only.
+- Charter throughout, from the reader's own machine. No webfonts, no third-party
+  requests of any kind.
+- No all caps, no em dashes, no rounded corners, no eyebrows.
+- UK dates, British spelling.
+- Nobody but you writes your copy.
+
+There is also a page-weight budget: the home page is 83.7KB uncompressed, which
+puts it in the 512KB Club green tier. Keep new images sized to their slot and
+saved as WebP and it stays there.
+
+---
+
+## 7. Public Repository
 
 The repository is intentionally public. **Do not commit:**
 - API keys or tokens of any kind
@@ -97,7 +131,7 @@ The GitHub Actions workflow uses `GITHUB_TOKEN` which is automatically provided 
 
 ---
 
-## 7. Removed Pages
+## 8. Removed Pages
 
 `/blog/` no longer exists as a listing. The home page carries every post in two columns, so a separate archive had nothing to do. `pages/blog.njk` is now a redirect stub that sends `/blog/` to `/`, keep it, or delete it and accept a 404 for anyone holding an old link.
 
@@ -105,7 +139,7 @@ The GitHub Actions workflow uses `GITHUB_TOKEN` which is automatically provided 
 
 ---
 
-## 8. Adding a New Tag
+## 9. Adding a New Tag
 
 1. Add the tag to any post's frontmatter: `tags: [post, my-new-tag]`
 2. Push to `main`
@@ -119,7 +153,7 @@ Zero config changes. Zero template changes.
 
 ---
 
-## 9. Dependency Maintenance
+## 10. Dependency Maintenance
 
 ```bash
 npm update
@@ -129,7 +163,7 @@ Review the [Eleventy changelog](https://www.11ty.dev/docs/) before major version
 
 ---
 
-## 10. Search Console
+## 11. Search Console
 
 After going live on the main domain:
 1. Verify the property at [search.google.com/search-console](https://search.google.com/search-console)
@@ -139,7 +173,7 @@ After going live on the main domain:
 
 ---
 
-## 11. Local Development
+## 12. Local Development
 
 Because the project lives on OneDrive, run the dev server from a copy in /tmp or another local path:
 
