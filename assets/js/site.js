@@ -7,9 +7,11 @@
      2. a spark on click
      3. index views — most recent, or by topic
      4. keyboard navigation and a filter over the index
+     5. the contact form submits without a page change
 
    Everything here is progressive enhancement. With the script blocked the
-   page keeps its painting, both index views, and every link.
+   page keeps its painting, both index views, every link, and a contact
+   form that posts normally and lands on Formspree's own confirmation.
    ========================================================================== */
 
 (() => {
@@ -361,6 +363,82 @@
     toggle.addEventListener('click', () => {
       const min = keys.classList.toggle('min');
       toggle.setAttribute('aria-expanded', String(!min));
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+     5. Contact form
+
+     Formspree returns JSON to any request that asks for it, so this needs no
+     library and the site keeps making zero third-party requests. Without the
+     script the form posts normally and Formspree renders its own thank you.
+     ------------------------------------------------------------------------ */
+  const cform = document.getElementById('contact-form');
+  const csent = document.getElementById('contact-sent');
+
+  if (cform && csent && window.fetch) {
+    const status = cform.querySelector('.status');
+    const submit = cform.querySelector('button[type="submit"]');
+    const FALLBACK = 'That did not send. Try again, or write to savva@pistolas.co.uk.';
+
+    const clearErrors = () => {
+      cform.querySelectorAll('.err').forEach(el => {
+        el.textContent = '';
+        const field = cform.elements[el.dataset.err];
+        if (field) field.removeAttribute('aria-invalid');
+      });
+    };
+
+    const showError = (name, message) => {
+      const el = name && cform.querySelector('.err[data-err="' + name + '"]');
+      if (!el) return false;
+      el.textContent = message;
+      const field = cform.elements[name];
+      if (field) field.setAttribute('aria-invalid', 'true');
+      return true;
+    };
+
+    cform.addEventListener('submit', async e => {
+      e.preventDefault();
+      clearErrors();
+      status.textContent = 'Sending';
+      submit.disabled = true;
+
+      try {
+        const res = await fetch(cform.action, {
+          method: 'POST',
+          body: new FormData(cform),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (res.ok) {
+          cform.hidden = true;
+          csent.hidden = false;
+          csent.focus();
+          return;
+        }
+
+        const data = await res.json().catch(() => null);
+        const errors = (data && data.errors) || [];
+        let placed = 0;
+
+        errors.forEach(err => {
+          const name = err.field || (err.source && err.source.field);
+          if (showError(name, err.message)) placed++;
+        });
+
+        if (placed === errors.length && placed > 0) {
+          status.textContent = '';   /* the inline field errors say it */
+        } else if (errors.length) {
+          status.textContent = errors[0].message;
+        } else {
+          status.textContent = FALLBACK;
+        }
+      } catch (err) {
+        status.textContent = FALLBACK;
+      } finally {
+        submit.disabled = false;
+      }
     });
   }
 

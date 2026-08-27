@@ -19,6 +19,11 @@ eleventyExcludeFromCollections: true
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>{{ site.url }}/contact/</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   {% for tag in collections.tagList %}
   <url>
     <loc>{{ site.url }}/tag/{{ tag }}/</loc>

@@ -762,6 +762,141 @@ main {
 }
 
 /* ==========================================================================
+   CONTACT FORM
+   ========================================================================== */
+.contact {
+  max-width: 62ch;
+  border-top: 3px solid var(--ink);
+  padding-top: 1.2rem;
+}
+
+.contact .field {
+  margin: 0 0 1.1rem;
+}
+
+.contact label {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: .2rem;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: .4rem .8ch;
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 1px;
+}
+
+.contact [aria-invalid="true"] {
+  border-color: var(--mark);
+  border-width: 2px;
+}
+
+.contact .err {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--mark);
+  margin-top: .2rem;
+}
+
+.contact .err:empty {
+  display: none;
+}
+
+.contact .actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 2ch;
+  margin: 0;
+  border-top: 1px solid var(--ink);
+  padding-top: 1rem;
+}
+
+.contact button {
+  font: inherit;
+  font-size: 15px;
+  color: var(--link);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: .35rem 2.4ch;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.contact button:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 2px;
+}
+
+.contact button[disabled] {
+  cursor: default;
+  font-style: italic;
+}
+
+.contact button[disabled]:hover {
+  background: var(--paper);
+  color: var(--link);
+}
+
+.contact .status {
+  font-size: 14.5px;
+  font-style: italic;
+}
+
+.contact .status:not(:empty)::before {
+  content: "";
+}
+
+/* Honeypot: out of sight, still in the tab order for nobody */
+.contact .gotcha {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sent {
+  max-width: 62ch;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 1.1rem 0;
+  font-size: 17px;
+  margin: 0 0 1rem;
+}
+
+.sent:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
    NOT FOUND
    ========================================================================== */
 .err {
@@ -1012,6 +1147,7 @@ main {
   #find,
   #spark,
   .viewbar,
+  .contact .actions,
   .site-footer .feeds {
     display: none;
   }
