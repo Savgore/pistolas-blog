@@ -89,6 +89,62 @@ module.exports = function (eleventyConfig) {
     return out;
   });
 
+  // --- Build-time minification ---
+  //
+  // Source stays readable; only the built copy is squeezed. The clubs that
+  // measure page weight count uncompressed bytes, so this is worth doing even
+  // though GitHub Pages gzips everything on the way out.
+
+  // Quoted strings are lifted out before whitespace is touched, so a rule like
+  // content: " (" attr(href) ")" survives intact.
+  const minifyCss = (css) => {
+    const strings = [];
+    let out = css.replace(/"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/g, (m) => {
+      strings.push(m);
+      return `\u0000${strings.length - 1}\u0000`;
+    });
+    out = out
+      .replace(/\/\*[\s\S]*?\*\//g, "")
+      .replace(/\s+/g, " ")
+      .replace(/\s*([{}:;,>])\s*/g, "$1")
+      .replace(/;}/g, "}")
+      .trim();
+    return out.replace(/\u0000(\d+)\u0000/g, (m, i) => strings[+i]);
+  };
+
+  // Deliberately conservative: block comments and indentation only, no
+  // statement rewriting. Anything cleverer risks a regex literal or a string.
+  const minifyJs = (js) => js
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/^[ \t]+/gm, "")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+
+  // assets/ is a passthrough copy, so transforms never see it. Squeeze the
+  // built files once the build has finished instead.
+  eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    const fs = require("fs");
+    const path = require("path");
+
+    const squeeze = (file, fn, check) => {
+      const full = path.join(dir.output, file);
+      if (!fs.existsSync(full)) return;
+      const before = fs.readFileSync(full, "utf8");
+      const after = fn(before);
+      if (check) check(after);
+      fs.writeFileSync(full, after);
+      const pct = Math.round((1 - after.length / before.length) * 100);
+      console.log(
+        `[minify] ${file} ${(before.length / 1024).toFixed(1)}KB -> ` +
+        `${(after.length / 1024).toFixed(1)}KB (${pct}% off)`
+      );
+    };
+
+    squeeze("assets/css/style.css", minifyCss);
+    // If the squeeze broke the syntax, throw rather than ship it.
+    squeeze("assets/js/site.js", minifyJs, (js) => new Function(js));
+  });
+
   // --- Transforms ---
 
   // Defer images a reader may never scroll to. `loading="lazy"` never delays

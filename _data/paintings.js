@@ -11,11 +11,11 @@
 
 module.exports = {
     header: {
-        src: "/assets/paintings/ninth-wave.jpg",
+        src: "/assets/paintings/ninth-wave.webp",
         credit: "Ivan Aivazovsky, The Ninth Wave, 1850",
     },
     lost: {
-        src: "/assets/paintings/temeraire.jpg",
+        src: "/assets/paintings/temeraire.webp",
         credit: "J. M. W. Turner, The Fighting Temeraire tugged to her last berth to be broken up, 1839",
     },
 };
