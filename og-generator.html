@@ -4,117 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200">
-    <title>OG Image Generator — pistolas.co.uk</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;1,400&display=swap"
-        rel="stylesheet">
+    <title>OG Image Generator, pistolas.co.uk</title>
     <style>
-        * {
+        /* Same five colours and the same face as the site. Charter comes from
+           the machine you are screenshotting on, so there is no font request
+           here either. If the card renders in
+           Georgia, Charter is missing. Check before you export. */
+
+        :root {
+            --paper: #FFFFFF;
+            --ink: #000000;
+            --mark: #CC0000;
+            --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+        }
+
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            border-radius: 0;
         }
 
         body {
-            background: #888;
+            background: #DDD;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px;
-            gap: 24px;
-            font-family: system-ui, sans-serif;
+            gap: 20px;
+            font-family: var(--serif);
+            color: #000;
         }
 
-        p {
-            color: #fff;
-            font-size: 14px;
+        .note {
+            font-size: 15px;
+            max-width: 1200px;
+            line-height: 1.5;
         }
 
-        /* ── The OG card ── */
-        .og-card {
+        .note code {
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-size: .85em;
+        }
+
+        /* ---- the card ---- */
+        .og {
             width: 1200px;
             height: 630px;
-            background: #2B5C38;
-            position: relative;
+            background: var(--paper);
+            color: var(--ink);
+            border: 3px solid var(--ink);
             overflow: hidden;
             flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 72px 80px;
         }
 
-        /* Left accent bar */
-        .og-card__bar {
-            position: absolute;
-            left: 80px;
-            top: 180px;
-            width: 4px;
-            height: 230px;
-            background: #C2CAC2;
+        /* the site's masthead rule, at card scale */
+        .og__rule {
+            height: 6px;
+            background: var(--ink);
+            margin-bottom: 22px;
         }
 
-        /* Text block */
-        .og-card__text {
-            position: absolute;
-            left: 112px;
-            top: 180px;
-        }
-
-        .og-card__name {
-            font-family: 'Playfair Display', Georgia, serif;
+        .og__name {
+            font-size: 100px;
             font-weight: 700;
-            font-size: 96px;
-            line-height: 1.05;
-            color: #F3F5F2;
-            display: block;
+            line-height: 1;
+            letter-spacing: -.025em;
+            margin-bottom: 30px;
         }
 
-        .og-card__suffix {
-            font-family: 'Lora', Georgia, serif;
-            font-weight: 400;
+        .og__name i {
             font-style: italic;
-            font-size: 64px;
-            line-height: 1.1;
-            color: #E6EAE5;
-            display: block;
-            margin-top: 4px;
-        }
-
-        /* Horizontal rule */
-        .og-card__rule {
-            position: absolute;
-            left: 112px;
-            right: 80px;
-            top: 410px;
-            height: 1.5px;
-            background: #C2CAC2;
-        }
-
-        /* URL */
-        .og-card__url {
-            position: absolute;
-            left: 112px;
-            top: 432px;
-            font-family: 'Lora', Georgia, serif;
             font-weight: 400;
-            font-size: 28px;
-            letter-spacing: 0.05em;
-            color: #C2CAC2;
+        }
+
+        .og__foot {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 4ch;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .og__foot .url {
+            font-style: normal;
+        }
+
+        .og__foot .mark {
+            color: var(--mark);
+            text-align: right;
+        }
+
+        /* Per-post cards: title at the top, name down in the footer.
+           Add class="og og--post" and fill .og__title. */
+        .og--post {
+            justify-content: space-between;
+        }
+
+        .og--post .og__title {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -.02em;
+            max-width: 19ch;
+            text-wrap: balance;
         }
     </style>
 </head>
 
 <body>
-    <p>Screenshot the card below at exactly 1200×630px and save as <code>assets/og-default.png</code>. Use browser
-        DevTools → Capture screenshot, or a tool like Shottr with a fixed 1200×630 selection.</p>
+    <p class="note">
+        Screenshot a card below at exactly 1200&times;630 and save it. The site card goes to
+        <code>assets/og-default.png</code>; a per-post card goes to <code>assets/posts/[slug]/og.png</code> and needs
+        <code>og_image</code> set in that post's frontmatter. Use DevTools &rarr; Capture node screenshot on the
+        <code>.og</code> element, which crops exactly without a fixed selection.
+    </p>
 
-    <div class="og-card">
-        <div class="og-card__bar"></div>
-        <div class="og-card__text">
-            <span class="og-card__name">Savva Pistolas&rsquo;</span>
-            <span class="og-card__suffix">website</span>
+    <!-- Site default -->
+    <div class="og">
+        <p class="og__name">Savva Pistolas&rsquo; <i>website</i></p>
+        <div class="og__end">
+            <div class="og__rule"></div>
+            <div class="og__foot">
+                <span class="url">pistolas.co.uk</span>
+                <span class="mark">Writing on systems, security and AI</span>
+            </div>
         </div>
-        <div class="og-card__rule"></div>
-        <div class="og-card__url">pistolas.co.uk</div>
+    </div>
+
+    <!-- Per-post: replace the title, keep everything else -->
+    <div class="og og--post">
+        <p class="og__title">AI as a detector of work that needn&rsquo;t be</p>
+        <div class="og__end">
+            <div class="og__rule"></div>
+            <div class="og__foot">
+                <span class="url">pistolas.co.uk</span>
+                <span class="mark">Savva Pistolas</span>
+            </div>
+        </div>
     </div>
 </body>
 

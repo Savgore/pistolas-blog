@@ -31,7 +31,7 @@ The group was comprised of seven people aged between 16 - 21, with the generally
 
 When the group was on their first major spree in 2022, I remember learning about the straight-forward nature of their attacks. Their process of accessing, exploiting, and extorting is actually quite a simple one. Despite the simplicity of the process, it nonetheless successfully attacked global giants like Nvidia, Samsung, Ubisoft, T-Mobile, Microsoft, and Uber.
 
-Described by [Krebs](tab:https://krebsonsecurity.com/2022/03/a-closer-look-at-the-lapsus-data-extortion-group/) as "Low tech, high impact", the Lapsus$ group employ solutions such as SIM swapping - where the attacker convinces a phone service carrier to switch a target SIM over to a new physical SIM to provide the ability to do text based multi-factor authentication. This, combined with an employees password, grants Lapsus$ access to their target network. 
+Described by [Krebs](https://krebsonsecurity.com/2022/03/a-closer-look-at-the-lapsus-data-extortion-group/) as "Low tech, high impact", the Lapsus$ group employ solutions such as SIM swapping - where the attacker convinces a phone service carrier to switch a target SIM over to a new physical SIM to provide the ability to do text based multi-factor authentication. This, combined with an employees password, grants Lapsus$ access to their target network. 
 
 They'll also happily just buy access to networks, purchasing access credentials from the internet, and also engage in plain old open recruitment on their telegram - saying they're ready to pay employees to give them access to their corporate accounts:
 
@@ -55,7 +55,7 @@ The intelligence was quite unanimous quite early on that Lapsus$ were a group of
 
 Microsoft produced a 4,000 word incident response and threat intelligence report on the group in the wake of their hack on the company, naming Lapsus$ as the 'DEV-0537 criminal actor' or 'Strawberry Tempest' using their new weather themed threat intelligence taxonomy. They explored the group's behaviour and threats, and did their best to take Lapsus' claims to pieces. The main success for Lapsus$ came as Microsoft still allowed telephony-based MFA (recieving a text message to authenticate yourself instead of using an app like Microsoft Authenticator or Authy) and so it was with great ease that the group could exploit this using SIM swapping. 
 
-The recommendation of avoiding using text messages for MFA was performatively publicised as guidance in the wake of the incident by Microsoft. This is a clear effort to make it appear as though we as a community are not already aware of this being best practice guidance that the giant was simply not following. Both the [National Cyber Security Centre](tab:https://www.ncsc.gov.uk/guidance/setting-2-step-verification-2sv#section_5) and the USA's [National Institute of Standards and Technology](tab:https://pages.nist.gov/800-63-3/sp800-63b.html#multifactorOTP) agree that telephony based MFA is inferior to other forms of MFA, and have done for quite a while.
+The recommendation of avoiding using text messages for MFA was performatively publicised as guidance in the wake of the incident by Microsoft. This is a clear effort to make it appear as though we as a community are not already aware of this being best practice guidance that the giant was simply not following. Both the [National Cyber Security Centre](https://www.ncsc.gov.uk/guidance/setting-2-step-verification-2sv#section_5) and the USA's [National Institute of Standards and Technology](https://pages.nist.gov/800-63-3/sp800-63b.html#multifactorOTP) agree that telephony based MFA is inferior to other forms of MFA, and have done for quite a while.
 
 It's always important to remember that anyone debriefing an incident response on their own organisation has a conflict of interest and is incentivised to make an incident appear as sophisticated as possible. To do any less is to admit the failure to prevent a simple attack succeeding. 
 
@@ -82,7 +82,7 @@ I am left wondering why the police who have charge over a vulnerable young autis
 
 Arion was actually deemed unfit to stand trial due to his severe autism, and it was this same mental health assessment that determined that he 'continued to express the intent to return to cyber-crime as soon as possible'. His condition was legally recognised as affecting his decision making, to the extent that the court was directed not to assess his intentions when committing these offences, but simply whether or not he conducted the attacks. Arion has demonstrated time and time again that he may be unable to conceptualise the relationship between the actions that he is taking and the full impact of the legal consequences.
 
-With each hack, Arion must have been releasing a huge amount of dopamine, the neurotransmitter in our brain that relates to motivation and pleasure. It is precisely this identification of the dysregulation of dopamine that is observable in autistic patients and is currently being explored by some in the neuroscience community as a corresponding trait of Autism([1](tab:https://www.jci.org/articles/view/127411), and [2](tab:https://karger.com/dne/article/39/5/355/107836/A-Dopamine-Hypothesis-of-Autism-Spectrum-Disorder)).
+With each hack, Arion must have been releasing a huge amount of dopamine, the neurotransmitter in our brain that relates to motivation and pleasure. It is precisely this identification of the dysregulation of dopamine that is observable in autistic patients and is currently being explored by some in the neuroscience community as a corresponding trait of Autism([1](https://www.jci.org/articles/view/127411), and [2](https://karger.com/dne/article/39/5/355/107836/A-Dopamine-Hypothesis-of-Autism-Spectrum-Disorder)).
 
 In this conception, dopamine may be a substance to which Arion had a dysregulated relationship - and the safeguarding effort should have protected him from the medium by which he could suffer further from that dysregulation. In effect, the failure to remove digital technology from his room is akin to leaving a harmful substance proximate and accessible to a dependant user.
 
@@ -106,7 +106,7 @@ This triple coincidence of wants amongst the private sector targets, the police,
 
 I hope this has adequately teased open a conversation about the finer points that may have been lost in the coverage 
 
-Huge international organisations such as Microsoft and Rockstar that fail to take adequate steps to secure their systems against simple attacks can expect similar future incidents. Rockstar claims that the GTA 6 leak cost them $5 Million and "thousands of hours of staff time", this was almost certainly about the voluntarily incurred marketing shift they launched to reexamine their strategy after the video game clips were leaked. It's also worth mentioning that Rockstar's notorious 'crunch culture' in which employees are culturally expected to work overtime 5 days a week means that Rockstar [won't be paying for hundreds of those extra hours anyway](tab:https://www.gamerevolution.com/news/447299-rockstar-games-crunch-developer).
+Huge international organisations such as Microsoft and Rockstar that fail to take adequate steps to secure their systems against simple attacks can expect similar future incidents. Rockstar claims that the GTA 6 leak cost them $5 Million and "thousands of hours of staff time", this was almost certainly about the voluntarily incurred marketing shift they launched to reexamine their strategy after the video game clips were leaked. It's also worth mentioning that Rockstar's notorious 'crunch culture' in which employees are culturally expected to work overtime 5 days a week means that Rockstar [won't be paying for hundreds of those extra hours anyway](https://www.gamerevolution.com/news/447299-rockstar-games-crunch-developer).
 
 If we are certain then, that this is not the last teenager who will successfully break into a large organisation in this way (Arion is certainly not the first), we must make a decision. Do we engage with these incidents like has been done with Lapsus$, or do we accept our moral responsibility to people like Arion who are vulnerable and need cultural and social support.
 
@@ -116,6 +116,6 @@ I am personally not bothered about bemoaning the impact of the damages to the br
 
 ---
 
-You can subscribe to my blog via [email](tab:https://pistolas.co.uk/subscribe) or [RSS feed](tab:https://pistolas.co.uk/feed/).
+You can subscribe to my blog via [email](/tags/) or [RSS feed](/feed.xml).
 
 *Thank you to Eulalia Saurin, Androula Pistolas, and Elaine Haigh for your expertise, insights, and time spent on helping me produce this blog post.*
