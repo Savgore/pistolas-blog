@@ -7,7 +7,7 @@ module.exports = {
         email: "savva@pistolas.co.uk",
         twitter: "@savvapistolas",
     },
-    // Fixed navigation — not topics
+    // Fixed navigation, not topics
     navLinks: [
         { url: "/", label: "Writing" },
         { url: "/tags/", label: "Topics" },

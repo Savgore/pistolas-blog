@@ -5,7 +5,7 @@
      1. the header painting resolves into its own colours as characters,
         inside a disc that drags a trail behind the pointer
      2. a spark on click
-     3. index views — most recent, or by topic
+     3. index views, most recent, or by topic
      4. keyboard navigation and a filter over the index
      5. the contact form submits without a page change
 
@@ -65,7 +65,7 @@
       try {
         data = octx.getImageData(0, 0, cols, rows).data;
       } catch (e) {
-        /* cross-origin image — leave the painting alone */
+        /* cross-origin image, leave the painting alone */
         return false;
       }
 
@@ -152,7 +152,7 @@
       ctx.globalAlpha = 1;
     };
 
-    /* a share of characters re-roll each frame — the fluctuation */
+    /* a share of characters re-roll each frame, the fluctuation */
     const churn = () => {
       for (let k = 0; k < 200; k++) {
         const c = cells[(Math.random() * cells.length) | 0];
@@ -162,7 +162,7 @@
     };
 
     const frame = now => {
-      /* fades in briskly, lets go slowly — leaving the band should settle,
+      /* fades in briskly, lets go slowly, leaving the band should settle,
          not snap */
       hover += (want - hover) * (want ? 0.18 : 0.045);
       while (trail.length && now - trail[0].born > LIFE) trail.shift();

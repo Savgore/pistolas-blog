@@ -1,10 +1,10 @@
 /* ==========================================================================
-   pistolas.co.uk — site stylesheet
+   pistolas.co.uk, site stylesheet
 
    Five colours: paper, ink, link, visited, mark. No grey. Hierarchy is
    carried by size, weight, italic and rule rather than by tint.
    No uppercase, no letter-spaced labels, no rounded corners anywhere.
-   Charter throughout, from the reader's own machine — no webfont request.
+   Charter throughout, from the reader's own machine, no webfont request.
    ========================================================================== */
 
 :root {
@@ -126,7 +126,7 @@ main {
 }
 
 /* ==========================================================================
-   HEADER BAND — the painting
+   HEADER BAND, the painting
    ========================================================================== */
 .plate {
   position: relative;
@@ -149,7 +149,7 @@ main {
 }
 
 /* ==========================================================================
-   MASTHEAD — black field under the painting
+   MASTHEAD, black field under the painting
    ========================================================================== */
 .mast {
   background: #000;
@@ -246,7 +246,7 @@ main {
 }
 
 /* ==========================================================================
-   INDEX — two flowed columns, most recent first
+   INDEX, two flowed columns, most recent first
    ========================================================================== */
 .viewbar {
   display: flex;
@@ -355,7 +355,7 @@ main {
 }
 
 /* ==========================================================================
-   TOPICS — every post under each of its tags
+   TOPICS, every post under each of its tags
    ========================================================================== */
 .topics {
   columns: 3;
@@ -977,7 +977,7 @@ main {
 }
 
 /* ==========================================================================
-   FOOTER — the masthead again, smaller
+   FOOTER, the masthead again, smaller
    ========================================================================== */
 .site-footer {
   background: #000;

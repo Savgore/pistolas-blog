@@ -4,7 +4,7 @@
 // lines below. The attribution line in the footer is built from `credit`, so
 // nothing else needs editing.
 //
-// Header images must be cropped to roughly 6.2:1 and served from this domain —
+// Header images must be cropped to roughly 6.2:1 and served from this domain -
 // the header effect reads the image's pixels back off a canvas, and a
 // cross-origin image would block that. The not-found image has no such
 // constraints; it is a plain <img> at whatever shape it comes in.

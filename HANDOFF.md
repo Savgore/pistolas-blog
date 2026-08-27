@@ -1,4 +1,4 @@
-# pistolas.co.uk — Handoff Guide
+# pistolas.co.uk, Handoff Guide
 
 ## 1. Publishing a Post
 
@@ -6,7 +6,7 @@
 2. Add the frontmatter (see reference below)
 3. Write your post body in Markdown below the frontmatter
 4. Commit and push to `main`
-5. GitHub Actions builds and deploys automatically — live in ~30 seconds
+5. GitHub Actions builds and deploys automatically, live in ~30 seconds
 
 That's it. No CMS, no build step to run locally.
 
@@ -17,13 +17,13 @@ That's it. No CMS, no build step to run locally.
 ```yaml
 ---
 title: "Exact post title"           # required
-date: 2026-02-27                    # required — YYYY-MM-DD
+date: 2026-02-27                    # required, YYYY-MM-DD
 description: "One or two sentences, max 160 chars. Used in post subtitle, OG/Twitter meta, post list." # required
 tags:
-  - post                            # required system tag — keep this
+  - post                            # required system tag, keep this
   - security                        # one or more topic tags (see §3)
-permalink: /blog/your-slug/         # required — must match original URL if migrating
-og_image: /assets/og-default.png   # optional — use /assets/posts/[slug]/og.png for custom image
+permalink: /blog/your-slug/         # required, must match original URL if migrating
+og_image: /assets/og-default.png   # optional, use /assets/posts/[slug]/og.png for custom image
 ---
 ```
 
@@ -42,7 +42,7 @@ No `stream:` field. Tags are the only taxonomy.
 - Every tag automatically gets:
   - An archive page at `/tag/[tag]/`
   - An RSS feed at `/feeds/tags/[tag]/feed.xml`
-- **No config changes needed** when adding a new tag — just use it in frontmatter
+- **No config changes needed** when adding a new tag, just use it in frontmatter
 - Suggested starting tags: `security`, `systems`, `ai`, `alignment`, `privacy`, `futurism`, `making`, `now`
 - `now` is for short notes, TILs, and observations
 
@@ -53,7 +53,7 @@ No `stream:` field. Tags are the only taxonomy.
 **In-post images:**
 - Store in `/assets/posts/[your-slug]/image.png`
 - Reference in Markdown: `![alt text](/assets/posts/your-slug/image.png)`
-- The CSS applies a border automatically — don't bake borders into the image
+- The CSS applies a border automatically, don't bake borders into the image
 - Use descriptive `alt` text always
 
 **OG/social thumbnails:**
@@ -78,7 +78,7 @@ Drop the new file in `/assets/paintings/` and change the two lines.
 
 **Header images have two constraints:**
 - Crop to roughly **6.2:1**. The band is a fixed slot; anything squarer will look wrong.
-- Serve it from this domain. The header effect reads the image's pixels back off a canvas, and a cross-origin image throws a security error. The script catches this and leaves the painting alone, so the page still works — you just lose the effect.
+- Serve it from this domain. The header effect reads the image's pixels back off a canvas, and a cross-origin image throws a security error. The script catches this and leaves the painting alone, so the page still works, you just lose the effect.
 
 The not-found painting has neither constraint. It is a plain `<img>` at whatever shape it comes in.
 
@@ -93,13 +93,13 @@ The repository is intentionally public. **Do not commit:**
 - Personal or client email addresses not already on the public site
 - Unpublished drafts you're not ready to share
 
-The GitHub Actions workflow uses `GITHUB_TOKEN` which is automatically provided by GitHub — no manual secrets configuration needed.
+The GitHub Actions workflow uses `GITHUB_TOKEN` which is automatically provided by GitHub, no manual secrets configuration needed.
 
 ---
 
 ## 7. Removed Pages
 
-`/blog/` no longer exists as a listing. The home page carries every post in two columns, so a separate archive had nothing to do. `pages/blog.njk` is now a redirect stub that sends `/blog/` to `/` — keep it, or delete it and accept a 404 for anyone holding an old link.
+`/blog/` no longer exists as a listing. The home page carries every post in two columns, so a separate archive had nothing to do. `pages/blog.njk` is now a redirect stub that sends `/blog/` to `/`, keep it, or delete it and accept a 404 for anyone holding an old link.
 
 `/tags/` stays. The by-topic view on the home page duplicates its columns, but `/tags/` is the only place carrying the per-topic RSS URLs and the OPML bundle.
 
@@ -125,7 +125,7 @@ Zero config changes. Zero template changes.
 npm update
 ```
 
-Review the [Eleventy changelog](https://www.11ty.dev/docs/) before major version bumps — v3 to v4 may require config changes. All other dependencies (luxon, markdown-it, eleventy-plugin-rss) are stable and rarely break.
+Review the [Eleventy changelog](https://www.11ty.dev/docs/) before major version bumps, v3 to v4 may require config changes. All other dependencies (luxon, markdown-it, eleventy-plugin-rss) are stable and rarely break.
 
 ---
 
@@ -135,7 +135,7 @@ After going live on the main domain:
 1. Verify the property at [search.google.com/search-console](https://search.google.com/search-console)
 2. Submit `https://pistolas.co.uk/sitemap.xml`
 3. The sitemap includes all posts, tag pages, and fixed pages automatically
-4. If `/blog/` was previously indexed, request removal — it is now a redirect
+4. If `/blog/` was previously indexed, request removal, it is now a redirect
 
 ---
 
