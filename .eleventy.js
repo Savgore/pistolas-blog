@@ -5,7 +5,6 @@ module.exports = function (eleventyConfig) {
 
   // --- Ignore reference files ---
   eleventyConfig.ignores.add("pistolas-style-direction.html");
-  eleventyConfig.ignores.add("pistolas-style-direction-hunter.html");
   eleventyConfig.ignores.add("pistolas-build-prompt.md");
   eleventyConfig.ignores.add("HANDOFF.md");
   eleventyConfig.ignores.add("og-generator.html");
@@ -15,6 +14,7 @@ module.exports = function (eleventyConfig) {
   // --- Passthrough copies ---
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy({ "pages/robots.txt": "robots.txt" });
 
   // --- Filters ---
@@ -50,6 +50,43 @@ module.exports = function (eleventyConfig) {
   // Return display tags — all tags minus system tags
   eleventyConfig.addFilter("displayTags", (tags) => {
     return (tags || []).filter(t => !["post", "posts"].includes(t));
+  });
+
+  // Drop the current page from a post collection
+  eleventyConfig.addFilter("without", (posts, url) => {
+    return posts.filter(p => p.url !== url);
+  });
+
+  // Sort tags by how many posts carry them, heaviest first, then alphabetically
+  eleventyConfig.addFilter("byCount", (tags, posts) => {
+    const count = (t) => posts.filter(p => (p.data.tags || []).includes(t)).length;
+    return [...tags].sort((a, b) => count(b) - count(a) || a.localeCompare(b));
+  });
+
+  // --- Section headings ---
+  // markdown-it does not emit ids, so derive them here rather than adding a
+  // plugin. `addHeadingIds` stamps them onto the rendered HTML and `headings`
+  // reads the same list out for the contents column. Both use one slug rule.
+  const slugify = (s) => s
+    .replace(/<[^>]+>/g, "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+  eleventyConfig.addFilter("addHeadingIds", (html) => {
+    return (html || "").replace(/<h2>([\s\S]*?)<\/h2>/g,
+      (m, inner) => `<h2 id="${slugify(inner)}">${inner}</h2>`);
+  });
+
+  eleventyConfig.addFilter("headings", (html) => {
+    const out = [];
+    const re = /<h2>([\s\S]*?)<\/h2>/g;
+    let m;
+    while ((m = re.exec(html || ""))) {
+      out.push({ id: slugify(m[1]), text: m[1].replace(/<[^>]+>/g, "") });
+    }
+    return out;
   });
 
   // --- Collections ---

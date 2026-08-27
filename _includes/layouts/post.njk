@@ -2,54 +2,56 @@
 layout: base
 ---
 {% set displayTagList = tags | displayTags %}
-{% set firstTag = displayTagList[0] if displayTagList.length > 0 else null %}
+{% set firstTag = displayTagList[0] if displayTagList.length else null %}
+{% set body = content | addHeadingIds %}
+{% set sections = content | headings %}
 
-<article class="article-wrap">
-  <div class="article-meta">
-    {% if date %}<time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% endif %}
-    {% for tag in displayTagList %}
-    <a class="article-meta__tag" href="/tag/{{ tag }}/">{{ tag }}</a>
-    {% endfor %}
-    <span>{{ content | readingTime }} min read</span>
-  </div>
-
-  <h1 class="article-title">{{ title }}</h1>
-
-  {% if description %}
-  <p class="article-subtitle">{{ description }}</p>
-  {% endif %}
-
-  <hr class="article-rule">
+<article class="post">
+  <header class="post-hd">
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="dek">{{ description }}</p>{% endif %}
+    <p class="line">
+      {%- if date %}<time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% endif %}
+      {%- if displayTagList.length %} ·
+      {%- for tag in displayTagList %} <a href="/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %},{% endif %}{% endfor %}
+      {%- endif %} · {{ content | readingTime }} min read
+    </p>
+  </header>
 
   <div class="prose">
-    {{ content | safe }}
+    {{ body | safe }}
   </div>
+
+  <aside class="aside">
+    {% if sections.length %}
+    <p class="hd">Contents</p>
+    <ol>
+      {%- for s in sections %}
+      <li><a href="#{{ s.id }}">{{ s.text }}</a></li>
+      {%- endfor %}
+    </ol>
+    {% endif %}
+    {% if displayTagList.length %}
+    <p class="hd">Filed under</p>
+    <ul class="sn">
+      {%- for tag in displayTagList %}
+      <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+      {%- endfor %}
+    </ul>
+    {% endif %}
+  </aside>
 
   {% if firstTag %}
-  {% set relatedPosts = collections.posts | byTag(firstTag) | limit(4) %}
-  {% set hasRelated = false %}
-  {% for post in relatedPosts %}
-    {% if post.url != page.url %}{% set hasRelated = true %}{% endif %}
-  {% endfor %}
-
-  {% if hasRelated %}
-  <div class="related-posts">
-    <span class="related-posts__heading">More posts tagged {{ firstTag }}</span>
-    <div class="post-list" style="padding: 0;">
-    {% set relatedCount = 0 %}
-    {% for post in relatedPosts %}
-      {% if post.url != page.url and relatedCount < 3 %}
-        {% set relatedCount = relatedCount + 1 %}
-        {% set title = post.data.title %}
-        {% set date = post.date %}
-        {% set url = post.url %}
-        {% set description = post.data.description %}
-        {% set tags = post.data.tags %}
-        {% include "partials/post-item.njk" %}
-      {% endif %}
-    {% endfor %}
-    </div>
+  {%- set related = collections.posts | byTag(firstTag) | without(page.url) | limit(6) %}
+  {%- if related.length %}
+  <div class="related">
+    <p class="hd">More on {{ firstTag }}</p>
+    <ul>
+      {%- for post in related %}
+      <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
   </div>
-  {% endif %}
+  {%- endif %}
   {% endif %}
 </article>

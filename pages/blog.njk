@@ -1,24 +1,18 @@
 ---
-layout: base
-title: "Writing"
-description: "All posts — AI, alignment, systems thinking, cybersecurity, futurism, privacy, and more."
-permalink: /blog/
+permalink: /blog/index.html
+eleventyExcludeFromCollections: true
+layout: null
 ---
-
-<div class="site-hero">
-  <h1>Writing</h1>
-  <p>All posts, newest first.</p>
-</div>
-
-{% include "partials/tag-bar.njk" %}
-
-<div class="post-list">
-  {% for post in collections.posts %}
-    {% set title = post.data.title %}
-    {% set date = post.date %}
-    {% set url = post.url %}
-    {% set description = post.data.description %}
-    {% set tags = post.data.tags %}
-    {% include "partials/post-item.njk" %}
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Writing — Savva Pistolas</title>
+<link rel="canonical" href="{{ site.url }}/">
+<meta http-equiv="refresh" content="0; url=/">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<p>All writing now lives at <a href="/">{{ site.url }}/</a>.</p>
+</body>
+</html>

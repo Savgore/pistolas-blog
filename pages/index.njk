@@ -5,27 +5,27 @@ description: "Writing about AI, alignment, systems thinking, cybersecurity, futu
 permalink: /
 ---
 
-<div class="site-hero">
+<div class="hero">
   <h1>Hello, welcome to<br><em>my website.</em></h1>
   <p>Welcome to my personal website. I'm a cyber security consultant with a love for management cybernetics and building useful systems. I love thinking about how we can use information systems to solve problems and help people.</p>
-  <p style="margin-top: var(--space-4);">This website is small and personal - mostly serving as a home for my blog. If you want to connect professionally head over to my <a href="https://www.linkedin.com/in/savvapistolas/">LinkedIn</a>, or to my consulting website <a href="https://turtledovecyber.com">Turtledove Cyber</a>. Enjoy your stay.</p>
+  <p>This website is small and personal - mostly serving as a home for my blog. If you want to connect professionally head over to my <a href="https://www.linkedin.com/in/savvapistolas/">LinkedIn</a>, or to my consulting website <a href="https://turtledovecyber.com">Turtledove Cyber</a>. Enjoy your stay.</p>
 </div>
 
-{% include "partials/tag-bar.njk" %}
+<nav class="viewbar" aria-label="Index view">
+  <a href="#view-recent" data-view="recent" aria-current="page">Most recent</a><span>·</span>
+  <a href="#view-topics" data-view="topics">By topic</a>
+</nav>
 
-<div class="post-list">
-  {% for post in collections.posts | limit(10) %}
-    {% set title = post.data.title %}
-    {% set date = post.date %}
-    {% set url = post.url %}
-    {% set description = post.data.description %}
-    {% set tags = post.data.tags %}
-    {% include "partials/post-item.njk" %}
-  {% endfor %}
+<div class="index" id="view-recent">
+  {%- for post in collections.posts %}
+  {% include "partials/post-item.njk" %}
+  {%- endfor %}
 </div>
 
-<div class="rss-section">
-  <span class="rss-section__label">Subscribe</span>
-  <a class="rss-section__link" href="/feed.xml">RSS — All posts</a>
-  <a class="rss-section__link" href="/tags/">RSS — By topic</a>
+{% include "partials/topic-columns.njk" %}
+
+<div class="subscribe">
+  <span class="lab">Subscribe</span>
+  <a href="/feed.xml">RSS All posts</a>
+  <a href="/tags/">RSS By topic</a>
 </div>

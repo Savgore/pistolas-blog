@@ -1,0 +1,7 @@
+<nav class="topic-nav" aria-label="Topics">
+  Topics:
+  {%- for t in collections.tagList %}
+  <a href="/tag/{{ t }}/"{% if activeTag == t %} aria-current="page"{% endif %}>{{ t }}</a>{% if not loop.last %} ·{% endif %}
+  {%- endfor %}
+  · <a href="/tags/">all feeds</a>
+</nav>

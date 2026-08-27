@@ -9,9 +9,10 @@ module.exports = {
     },
     // Fixed navigation — not topics
     navLinks: [
-        { url: "/blog/", label: "Writing" },
+        { url: "/", label: "Writing" },
         { url: "/tags/", label: "Topics" },
         { url: "/about/", label: "About" },
+        { url: "/contact/", label: "Contact" },
     ],
     currentYear: new Date().getFullYear(),
 };

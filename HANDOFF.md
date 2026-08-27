@@ -57,33 +57,32 @@ No `stream:` field. Tags are the only taxonomy.
 - Use descriptive `alt` text always
 
 **OG/social thumbnails:**
-- Default: `/assets/og-default.png` (1200×630px, hunter palette)
+- Default: `/assets/og-default.png` (1200×630px)
 - Custom per-post: save to `/assets/posts/[slug]/og.png` and set `og_image: /assets/posts/[slug]/og.png` in frontmatter
-- OG spec: 1200×630px, `#2B5C38` background, stone `#C2CAC2` rule, Playfair Display title, Source Code Pro byline
+- OG spec: 1200×630px, black on white, 1px black rule, Charter title, Charter italic byline. `og-generator.html` in the repo root still draws the retired green palette and needs updating before its next use.
 
 ---
 
-## 5. Cutting Over to Main Domain
+## 5. Swapping the Paintings
 
-To go live at `pistolas.co.uk` (currently staging at `new.pistolas.co.uk`):
+Two paintings carry the design: the header band and the not-found page. Both are set in `_data/paintings.js`, and the attribution line in the footer is built from the `credit` fields, so a swap is one file.
 
-1. In `.github/workflows/deploy.yml`, change:
-   ```yaml
-   cname: new.pistolas.co.uk
-   ```
-   to:
-   ```yaml
-   cname: pistolas.co.uk
-   ```
-2. Set DNS at your registrar:
-   - Four A records pointing `@` to:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - One CNAME record pointing `www` to `[your-github-username].github.io`
-3. Push the change to `main` — GitHub Actions will deploy and set the CNAME file automatically
-4. DNS propagation typically takes a few minutes to a few hours
+```js
+module.exports = {
+  header: { src: "/assets/paintings/ninth-wave.jpg", credit: "Ivan Aivazovsky, The Ninth Wave, 1850" },
+  lost:   { src: "/assets/paintings/temeraire.jpg",  credit: "J. M. W. Turner, The Fighting Temeraire..." },
+};
+```
+
+Drop the new file in `/assets/paintings/` and change the two lines.
+
+**Header images have two constraints:**
+- Crop to roughly **6.2:1**. The band is a fixed slot; anything squarer will look wrong.
+- Serve it from this domain. The header effect reads the image's pixels back off a canvas, and a cross-origin image throws a security error. The script catches this and leaves the painting alone, so the page still works — you just lose the effect.
+
+The not-found painting has neither constraint. It is a plain `<img>` at whatever shape it comes in.
+
+Use public domain work and keep the credit accurate. Wikimedia Commons is the usual source; download at 1600–2400px wide and compress to under ~150KB.
 
 ---
 
@@ -98,7 +97,15 @@ The GitHub Actions workflow uses `GITHUB_TOKEN` which is automatically provided 
 
 ---
 
-## 7. Adding a New Tag
+## 7. Removed Pages
+
+`/blog/` no longer exists as a listing. The home page carries every post in two columns, so a separate archive had nothing to do. `pages/blog.njk` is now a redirect stub that sends `/blog/` to `/` — keep it, or delete it and accept a 404 for anyone holding an old link.
+
+`/tags/` stays. The by-topic view on the home page duplicates its columns, but `/tags/` is the only place carrying the per-topic RSS URLs and the OPML bundle.
+
+---
+
+## 8. Adding a New Tag
 
 1. Add the tag to any post's frontmatter: `tags: [post, my-new-tag]`
 2. Push to `main`
@@ -112,7 +119,7 @@ Zero config changes. Zero template changes.
 
 ---
 
-## 8. Dependency Maintenance
+## 9. Dependency Maintenance
 
 ```bash
 npm update
@@ -122,16 +129,17 @@ Review the [Eleventy changelog](https://www.11ty.dev/docs/) before major version
 
 ---
 
-## 9. Search Console
+## 10. Search Console
 
 After going live on the main domain:
 1. Verify the property at [search.google.com/search-console](https://search.google.com/search-console)
 2. Submit `https://pistolas.co.uk/sitemap.xml`
 3. The sitemap includes all posts, tag pages, and fixed pages automatically
+4. If `/blog/` was previously indexed, request removal — it is now a redirect
 
 ---
 
-## 10. Local Development
+## 11. Local Development
 
 Because the project lives on OneDrive, run the dev server from a copy in /tmp or another local path:
 
