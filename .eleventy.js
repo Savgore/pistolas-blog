@@ -89,6 +89,19 @@ module.exports = function (eleventyConfig) {
     return out;
   });
 
+  // --- Transforms ---
+
+  // Defer images a reader may never scroll to. `loading="lazy"` never delays
+  // an image already in the viewport, so this is safe everywhere except the
+  // header painting, which is above the fold on every page and stays eager.
+  eleventyConfig.addTransform("lazyImages", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(
+      /<img (?![^>]*\bloading=)(?![^>]*id="painting")/g,
+      '<img loading="lazy" decoding="async" '
+    );
+  });
+
   // --- Collections ---
 
   // All posts, newest first
