@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Contact · Savva Pistolas</title>
+
+
+<meta name="description" content="Say hello - email savva@pistolas.co.uk, or fill out the below.">
+<link rel="canonical" href="https://pistolas.co.uk/contact/">
+
+
+<meta property="og:title" content="Contact">
+<meta property="og:description" content="Say hello - email savva@pistolas.co.uk, or fill out the below.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pistolas.co.uk/contact/">
+
+<meta property="og:image" content="https://pistolas.co.uk/assets/og-default.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@savvapistolas">
+<meta name="twitter:title" content="Contact">
+<meta name="twitter:description" content="Say hello - email savva@pistolas.co.uk, or fill out the below.">
+
+<meta name="twitter:image" content="https://pistolas.co.uk/assets/og-default.png">
+
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+
+<link rel="alternate" type="application/rss+xml" title="All posts · Savva Pistolas" href="/feed.xml">
+
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<canvas id="spark" aria-hidden="true"></canvas>
+
+<div id="find" role="search">
+  <label for="find-q">Search</label>
+  <input id="find-q" type="search" autocomplete="off" spellcheck="false">
+  <span class="count" id="find-count"></span>
+</div>
+
+<div id="keys">
+  <button class="toggle" id="keys-toggle" aria-expanded="true">Keys</button>
+  <dl>
+    <dt>/</dt><dd>search</dd>
+    <dt>j k</dt><dd>move</dd>
+    <dt>&#8629;</dt><dd>open</dd>
+    <dt>t</dt><dd>topics</dd>
+    <dt>g h</dt><dd>home</dd>
+    <dt>?</dt><dd>hide</dd>
+  </dl>
+</div>
+
+
+<div class="frame">
+  
+
+<figure class="plate" style="margin:0">
+  <img id="painting"
+       src="/assets/paintings/ninth-wave.webp"
+       alt="Ivan Aivazovsky, The Ninth Wave, 1850"
+       data-credit="Ivan Aivazovsky, The Ninth Wave, 1850"
+       width="1700" height="276">
+  <canvas id="painting-canvas" aria-hidden="true"></canvas>
+</figure>
+
+<header class="mast">
+  <p class="name"><a href="/">Savva Pistolas' <i>website</i></a></p>
+  <nav class="bar" aria-label="Site navigation">
+    <a href="/">Writing</a><span>·</span>
+    <a href="/tags/">Topics</a><span>·</span>
+    <a href="/about/">About</a><span>·</span>
+    <a href="/contact/" aria-current="page">Contact</a>
+    
+    <span class="right">Updated 8 Mar 2026</span>
+    
+  </nav>
+</header>
+
+  <main id="main">
+    
+<div class="page-hd">
+  <h1>Contact</h1>
+  <p>Say hello - email <a href="mailto:savva@pistolas.co.uk">savva@pistolas.co.uk</a>, or fill out the below.</p>
+</div>
+
+<p class="sent" id="contact-sent" hidden tabindex="-1">Sent.</p>
+
+<form class="contact" id="contact-form" action="https://formspree.io/f/xqpkzgyr" method="POST">
+  <p class="field">
+    <label for="contact-name">Name</label>
+    <input id="contact-name" name="name" type="text" autocomplete="name" required>
+    <span class="err" data-err="name"></span>
+  </p>
+
+  <p class="field">
+    <label for="contact-email">Email</label>
+    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+    <span class="err" data-err="email"></span>
+  </p>
+
+  <p class="field">
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" rows="9" required></textarea>
+    <span class="err" data-err="message"></span>
+  </p>
+
+  
+  <input type="hidden" name="_subject" value="pistolas.co.uk contact form">
+
+  
+  <p class="gotcha" aria-hidden="true">
+    <label for="contact-gotcha">Leave empty</label>
+    <input id="contact-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+  </p>
+
+  <p class="actions">
+    <button type="submit">Send</button>
+    <span class="status" role="status"></span>
+  </p>
+</form>
+
+  </main>
+  <footer class="site-footer">
+  <div class="row">
+    <p>© 2026 Savva Pistolas</p>
+    <div class="feeds">
+      <a href="/feed.xml">RSS All</a>
+      <a href="/tags/">RSS per topic</a>
+      <a href="/">Writing</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <p class="credits">Header: Ivan Aivazovsky, The Ninth Wave, 1850. Not found: J. M. W. Turner, The Fighting Temeraire tugged to her last berth to be broken up, 1839. Both public domain.</p>
+</footer>
+
+</div>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
